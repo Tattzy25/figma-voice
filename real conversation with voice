@@ -1,0 +1,1349 @@
+User
+[inaudible]
+
+3,545t
+00:02
+Assistant
+Hey! Lovely to hear from you. What are you shopping for today on tattty.com—something specific, or just browsing for inspiration?
+
+231t
+00:11
+User
+Let's look for numming creams
+
+3,794t
+00:14
+Assistant
+Got it, you’re looking for numbing creams. Let me check what’s available and sort out the options for you.
+
+299t
+00:16
+Tool call
+my_master_server
+search_catalog
+Request
+{
+  "shop_domain": "tattty.com",
+  "meta": {
+    "ucp-agent": {
+      "profile": "https://ucp-agent-profile.facetimefy.com/ucp/agent-profiles/2026-08-25/valid-with-capabilities.json"
+    }
+  },
+  "catalog": {
+    "query": "numbing cream",
+    "context": {
+      "language": "en",
+      "intent": "browse"
+    },
+    "filters": {
+      "available": true
+    },
+    "pagination": {
+      "limit": 10
+    }
+  }
+}
+Response
+{
+  "jsonrpc": "2.0",
+  "id": 2,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"ucp\":{\"version\":\"2026-04-08\",\"status\":\"success\",\"services\":{\"dev.ucp.shopping\":[]},\"capabilities\":{\"dev.ucp.shopping.catalog.search\":[{\"version\":\"2026-04-08\",\"spec\":\"https://ucp.dev/2026-04-08/specification/catalog\",\"schema\":\"https://ucp.dev/2026-04-08/schemas/shopping/catalog_search.json\"}],\"dev.ucp.shopping.catalog.lookup\":[{\"version\":\"2026-04-08\",\"spec\":\"https://ucp.dev/2026-04-08/specification/catalog\",\"schema\":\"https://ucp.dev/2026-04-08/schemas/shopping/catalog_lookup.json\"}],\"dev.ucp.shopping.cart\":[{\"version\":\"2026-04-08\",\"spec\":\"https://ucp.dev/2026-04-08/specification/cart\",\"schema\":\"https://ucp.dev/2026-04-08/schemas/shopping/cart.json\"}],\"dev.ucp.shopping.checkout\":[{\"version\":\"2026-04-08\",\"spec\":\"https://ucp.dev/2026-04-08/specification/checkout\",\"schema\":\"https://ucp.dev/2026-04-08/schemas/shopping/checkout.json\"}],\"dev.ucp.shopping.order\":[{\"version\":\"2026-04-08\",\"spec\":\"https://ucp.dev/2026-04-08/specification/order/\",\"schema\":\"https://ucp.dev/2026-04-08/schemas/shopping/order.json\"}],\"dev.ucp.shopping.fulfillment\":[{\"version\":\"2026-04-08\",\"spec\":\"https://ucp.dev/2026-04-08/specification/fulfillment\",\"schema\":\"https://ucp.dev/2026-04-08/schemas/shopping/fulfillment.json\",\"extends\":[\"dev.ucp.shopping.checkout\",\"dev.ucp.shopping.cart\"],\"requires\":{\"protocol\":{\"min\":\"2026-04-08\"}},\"config\":{\"allows_multi_destination\":{\"shipping\":false},\"allows_method_combinations\":[[\"shipping\"]]}}],\"dev.ucp.shopping.discount\":[{\"version\":\"2026-04-08\",\"spec\":\"https://ucp.dev/2026-04-08/specification/discount\",\"schema\":\"https://ucp.dev/2026-04-08/schemas/shopping/discount.json\",\"extends\":[\"dev.ucp.shopping.checkout\",\"dev.ucp.shopping.cart\"],\"requires\":{\"protocol\":{\"min\":\"2026-04-08\"}}}],\"dev.shopify.catalog\":[{\"version\":\"2026-04-08\",\"spec\":\"https://shopify.dev/docs/agents/catalog/storefront-catalog\",\"schema\":\"https://shopify.dev/ucp/schemas/2026-04-08/shopify_catalog.json\",\"extends\":[\"dev.ucp.shopping.catalog.search\",\"dev.ucp.shopping.catalog.lookup\"],\"requires\":{\"protocol\":{\"min\":\"2026-04-08\"}}}],\"dev.ucp.common.identity_linking\":[{\"version\":\"2026-04-08\",\"spec\":\"https://ucp.dev/2026-04-08/specification/identity-linking/\",\"schema\":\"https://ucp.dev/2026-04-08/schemas/common/identity_linking.json\",\"config\":{\"providers\":{\"app.shop.accounts\":[{\"type\":\"oauth2\",\"auth_url\":\"https://accounts.shop.app\"}]},\"scopes\":{}}}]},\"payment_handlers\":{\"com.google.pay\":[{\"id\":\"gpay\",\"version\":\"2026-01-11\",\"spec\":\"https://pay.google.com/gp/p/ucp/2026-01-11/\",\"schema\":\"https://pay.google.com/gp/p/ucp/2026-01-11/schemas/config.json\",\"config\":{\"api_version\":2,\"api_version_minor\":0,\"merchant_info\":{\"merchant_name\":\"TaTTTy\",\"merchant_id\":\"16708973830884969730\",\"merchant_origin\":\"tattty.com\",\"auth_jwt\":\"\"},\"allowed_payment_methods\":[{\"type\":\"CARD\",\"parameters\":{\"allowed_auth_methods\":[\"PAN_ONLY\",\"CRYPTOGRAM_3DS\"],\"allowed_card_networks\":[\"VISA\",\"MASTERCARD\",\"AMEX\",\"DISCOVER\"],\"billing_address_required\":true,\"billing_address_parameters\":{\"format\":\"FULL\",\"phone_number_required\":false}},\"tokenization_specification\":{\"type\":\"PAYMENT_GATEWAY\",\"parameters\":{\"gateway\":\"shopify\",\"gatewayMerchantId\":\"64941555787\"}}}]}}],\"dev.shopify.card\":[{\"id\":\"shopify.card\",\"version\":\"2026-01-15\",\"spec\":\"https://ucp.dev/specification/payment-handler-guide\",\"schema\":\"https://shopify.dev/ucp/card-payment-handler/2026-01-15/config.json\",\"config\":{\"payment_methods\":[{\"type\":\"card\",\"enabled_card_brands\":[\"visa\",\"master\",\"american_express\",\"discover\",\"diners_club\"]}]}}],\"dev.shopify.shop_pay\":[{\"id\":\"shop_pay\",\"version\":\"2026-04-08\",\"spec\":\"https://shopify.dev/ucp/shop-pay-handler/2026-04-08/spec.md\",\"schema\":\"https://shopify.dev/ucp/shop-pay-handler/2026-04-08/schema.json\",\"config\":{\"shop_id\":\"64941555787\"}}]}},\"products\":[{\"id\":\"gid://shopify/Product/7622254100555\",\"title\":\"Tattoo Numbing Cream - .35 oz\",\"description\":{\"html\":\"TBNC Tattoo Numbing Cream – Pain-Free Tattooing Starts Here Experience next-level comfort during your tattoo sessions with TBNC Tattoo Numbing Cream, trusted in over 3,200 tattoo studios nationwide and over 1 million tubes sold. Designed for both professional tattoo artists and tattoo enthusiasts, our premium numbing cream ensures a smoother, pain-reduced tattooing experience every time. Why TBNC is the #1 Choice for Tattoo Professionals and Enthusiasts Fast-Acting \\u0026 Long-Lasting: Our formula penetrates quickly to numb the skin effectively, keeping you comfortable throughout your 4-6 hour session. Max Lidocaine Formula: Provides powerful, fast-acting numbing to minimize pain during tattoo sessions. Tattoo Artist Approved: Preferred by professionals for clean application and no interference with tattoo ink. FDA Compliant \\u0026 Safe: Made with high-quality, clinically tested ingredients, ensuring safety and effectiveness for all skin types. Veteran Owned \\u0026 Operated: Proudly crafted by a veteran-led company in sunny Florida, combining precision, quality, and dedication. Trusted Nationwide: With over 3,200 tattoo studios stocking TBNC, it’s the go-to numbing solution across the U.S. How to Use TBNC Tattoo Numbing Cream Clean and dry the area to be tattooed. Apply a thick layer of TBNC Cream on the skin. Cover with plastic wrap for enhanced absorption. Wait 1 hour for maximum effect. Enjoy a comfortable, pain-free tattooing session. Find Detailed Instructions On Applying Tattoo Numbing Cream Who Needs TBNC Tattoo Numbing Cream? Whether you’re getting your first tattoo, working on a large sleeve, or a professional tattoo artist looking to offer your clients the best experience, TBNC is the ultimate solution for pain-free sessions. Why Choose TBNC Over Other Numbing Creams Proven results in thousands of professional tattoo studios. Professional-grade Max Lidocaine formula for superior numbing. Veteran-owned commitment to quality and customer satisfaction. Florida-based manufacturing ensures consistent, premium quality. Registered with the FDA NDC Code: 87562-001-01 Bring Comfort to Every Session Don’t let pain hold you back from your next masterpiece. With TBNC Tattoo Numbing Cream, you can focus on the art, not the discomfort. Order Now and join thousands of satisfied customers and tattoo artists who trust TBNC! Also try our Numbing Gel or Numbing Spray to get numb mid-session If you are getting a large tattoo be sure to check out our Tattoo Numbing Cream XL which is 3x larger\"},\"url\":\"https://tattty.com/products/tattoo-numbing-cream\",\"handle\":\"tattoo-numbing-cream\",\"price_range\":{\"min\":{\"amount\":2074,\"currency\":\"USD\"},\"max\":{\"amount\":2074,\"currency\":\"USD\"}},\"list_price_range\":{\"min\":{\"amount\":0,\"currency\":\"USD\"},\"max\":{\"amount\":0,\"currency\":\"USD\"}},\"variants\":[{\"id\":\"gid://shopify/ProductVariant/42212221681739\",\"sku\":\"791126458713\",\"title\":\"Default Title\",\"description\":{\"html\":\"TBNC Tattoo Numbing Cream – Pain-Free Tattooing Starts Here Experience next-level comfort during your tattoo sessions with TBNC Tattoo Numbing Cream, trusted in over 3,200 tattoo studios nationwide and over 1 million tubes sold. Designed for both professional tattoo artists and tattoo enthusiasts, our premium numbing cream ensures a smoother, pain-reduced tattooing experience every time. Why TBNC is the #1 Choice for Tattoo Professionals and Enthusiasts Fast-Acting \\u0026 Long-Lasting: Our formula penetrates quickly to numb the skin effectively, keeping you comfortable throughout your 4-6 hour session. Max Lidocaine Formula: Provides powerful, fast-acting numbing to minimize pain during tattoo sessions. Tattoo Artist Approved: Preferred by professionals for clean application and no interference with tattoo ink. FDA Compliant \\u0026 Safe: Made with high-quality, clinically tested ingredients, ensuring safety and effectiveness for all skin types. Veteran Owned \\u0026 Operated: Proudly crafted by a veteran-led company in sunny Florida, combining precision, quality, and dedication. Trusted Nationwide: With over 3,200 tattoo studios stocking TBNC, it’s the go-to numbing solution across the U.S. How to Use TBNC Tattoo Numbing Cream Clean and dry the area to be tattooed. Apply a thick layer of TBNC Cream on the skin. Cover with plastic wrap for enhanced absorption. Wait 1 hour for maximum effect. Enjoy a comfortable, pain-free tattooing session. Find Detailed Instructions On Applying Tattoo Numbing Cream Who Needs TBNC Tattoo Numbing Cream? Whether you’re getting your first tattoo, working on a large sleeve, or a professional tattoo artist looking to offer your clients the best experience, TBNC is the ultimate solution for pain-free sessions. Why Choose TBNC Over Other Numbing Creams Proven results in thousands of professional tattoo studios. Professional-grade Max Lidocaine formula for superior numbing. Veteran-owned commitment to quality and customer satisfaction. Florida-based manufacturing ensures consistent, premium quality. Registered with the FDA NDC Code: 87562-001-01 Bring Comfort to Every Session Don’t let pain hold you back from your next masterpiece. With TBNC Tattoo Numbing Cream, you can focus on the art, not the discomfort. Order Now and join thousands of satisfied customers and tattoo artists who trust TBNC! Also try our Numbing Gel or Numbing Spray to get numb mid-session If you are getting a large tattoo be sure to check out our Tattoo Numbing Cream XL which is 3x larger\"},\"price\":{\"amount\":2074,\"currency\":\"USD\"},\"availability\":{\"available\":true},\"options\":[{\"name\":\"Title\",\"label\":\"Default Title\"}],\"media\":[{\"type\":\"image\",\"url\":\"https://cdn.shopify.com/s/files/1/0649/4155/5787/files/TBNC_Tattoo_Numbing_Cream_8_1269806b-821f-4069-a795-b676ea18337e.jpg?v=1782788454\"}],\"requires\":{\"shipping\":true},\"checkout_url\":\"https://nba0ey-th.myshopify.com/cart/42212221681739:1\"}],\"options\":[{\"name\":\"Title\",\"values\":[{\"label\":\"Default Title\"}]}],\"media\":[{\"type\":\"image\",\"url\":\"https://cdn.shopify.com/s/files/1/0649/4155/5787/files/TBNC_Tattoo_Numbing_Cream_8_1269806b-821f-4069-a795-b676ea18337e.jpg?v=1782788454\",\"alt_text\":\"Tattoo Numbing Cream - TaTTTy\"}],\"categories\":[{\"value\":\"gid://shopify/TaxonomyCategory/hb-1-8\",\"taxonomy\":\"shopify\"}],\"tags\":[\"Shopify Collective\",\"The Best Numbing Cream\"],\"gift_card\":false,\"collections\":[{\"id\":\"gid://shopify/Collection/292815372363\",\"handle\":\"shop\",\"title\":\"Tattoo Numbing Creams\",\"description\":{\"html\":\"Effortless Tattoo Care and Numbing Solutions for Your Artwork Welcome to our curated collection of tattoo care and numbing solutions, designed to enhance your experience from your first ink to its final touch. Our products are here to make the aftercare process seamless, so you can focus on showcasing your beautiful tattoos without any discomfort.\"}},{\"id\":\"gid://shopify/Collection/296572878923\",\"handle\":\"recently-added\",\"title\":\"Recently Added\",\"description\":{\"html\":\"Fresh tattoo designs added to the catalog — check back often for new drops.\"}}]},{\"id\":\"gid://shopify/Product/7622254035019\",\"title\":\"Tattoo Numbing Cream - 1 oz\",\"description\":{\"html\":\"TBNC Tattoo Numbing Cream XL – 3X Size, 3X Power Experience tattoo comfort like never before with the TBNC Tattoo Numbing Cream XL – our largest and most powerful formula yet. Packed with maximum-strength lidocaine and a unique blend of soothing botanicals, this XL (1oz) version delivers triple the size and potency of our original cream, giving you longer-lasting comfort for big, detailed, or multiple tattoo sessions. Trusted Nationwide in Over 3,200 Tattoo Studios TBNC has earned its reputation as a tattoo artist–approved, customer-loved numbing cream. We’re proud to be stocked in over 3,200 professional tattoo studios across the United States, with artists recommending it daily for its reliability, speed, and effectiveness. Why Choose TBNC Tattoo Numbing Cream XL? 3X the Size – Perfect for large or multiple tattoos in one session. Max Lidocaine – Deep, lasting numbing for up to 4-6 hours. Skin-Safe \\u0026 FDA Approved – Gentle on skin without affecting ink or healing. Fast-Acting Formula – Starts working in as little as 20 minutes. Veteran Owned \\u0026 Operated – Built on discipline, integrity, and dedication. Proudly Located In Florida – with worldwide shipping. Perfect For: Full sleeve tattoos Back pieces and large coverage areas Long, multiple-hour tattoo sessions Clients with low pain tolerance How to Use TBNC Tattoo Numbing Cream XL Clean and dry the area to be tattooed. Apply a thick layer of TBNC Tattoo Numbing Cream XL. Cover with plastic wrap to lock in the numbing effect. Let it sit for 45–60 minutes before your tattoo session. Remove wrap, wipe excess cream, and enjoy a more comfortable tattoo experience. Find Detailed Instructions On Applying Tattoo Numbing Cream Our Numbing Cream Is Listed With The FDA Registered with the FDA NDC Code: 87562-001-01 Why Artists \\u0026 Clients Love TBNC Our formula doesn’t cause skin swelling, won’t affect ink application, and maintains skin texture – making it a favorite among professional tattoo artists. With its proven performance, it’s no wonder TBNC is the go-to numbing cream for both clients and pros nationwide. Order Your XL Supply Today Don’t settle for short-lasting numbing or small tubes that run out mid-session. Upgrade to the TBNC Tattoo Numbing Cream XL and enjoy maximum comfort for your biggest and boldest tattoos. TBNC – Proudly Veteran Owned, Florida Based, Tattoo Artist Approved.\"},\"url\":\"https://tattty.com/products/tattoo-numbing-cream-xl\",\"handle\":\"tattoo-numbing-cream-xl\",\"price_range\":{\"min\":{\"amount\":2984,\"currency\":\"USD\"},\"max\":{\"amount\":2984,\"currency\":\"USD\"}},\"list_price_range\":{\"min\":{\"amount\":3894,\"currency\":\"USD\"},\"max\":{\"amount\":3894,\"currency\":\"USD\"}},\"variants\":[{\"id\":\"gid://shopify/ProductVariant/42212221583435\",\"sku\":\"602581867623\",\"title\":\"Default Title\",\"description\":{\"html\":\"TBNC Tattoo Numbing Cream XL – 3X Size, 3X Power Experience tattoo comfort like never before with the TBNC Tattoo Numbing Cream XL – our largest and most powerful formula yet. Packed with maximum-strength lidocaine and a unique blend of soothing botanicals, this XL (1oz) version delivers triple the size and potency of our original cream, giving you longer-lasting comfort for big, detailed, or multiple tattoo sessions. Trusted Nationwide in Over 3,200 Tattoo Studios TBNC has earned its reputation as a tattoo artist–approved, customer-loved numbing cream. We’re proud to be stocked in over 3,200 professional tattoo studios across the United States, with artists recommending it daily for its reliability, speed, and effectiveness. Why Choose TBNC Tattoo Numbing Cream XL? 3X the Size – Perfect for large or multiple tattoos in one session. Max Lidocaine – Deep, lasting numbing for up to 4-6 hours. Skin-Safe \\u0026 FDA Approved – Gentle on skin without affecting ink or healing. Fast-Acting Formula – Starts working in as little as 20 minutes. Veteran Owned \\u0026 Operated – Built on discipline, integrity, and dedication. Proudly Located In Florida – with worldwide shipping. Perfect For: Full sleeve tattoos Back pieces and large coverage areas Long, multiple-hour tattoo sessions Clients with low pain tolerance How to Use TBNC Tattoo Numbing Cream XL Clean and dry the area to be tattooed. Apply a thick layer of TBNC Tattoo Numbing Cream XL. Cover with plastic wrap to lock in the numbing effect. Let it sit for 45–60 minutes before your tattoo session. Remove wrap, wipe excess cream, and enjoy a more comfortable tattoo experience. Find Detailed Instructions On Applying Tattoo Numbing Cream Our Numbing Cream Is Listed With The FDA Registered with the FDA NDC Code: 87562-001-01 Why Artists \\u0026 Clients Love TBNC Our formula doesn’t cause skin swelling, won’t affect ink application, and maintains skin texture – making it a favorite among professional tattoo artists. With its proven performance, it’s no wonder TBNC is the go-to numbing cream for both clients and pros nationwide. Order Your XL Supply Today Don’t settle for short-lasting numbing or small tubes that run out mid-session. Upgrade to the TBNC Tattoo Numbing Cream XL and enjoy maximum comfort for your biggest and boldest tattoos. TBNC – Proudly Veteran Owned, Florida Based, Tattoo Artist Approved.\"},\"price\":{\"amount\":2984,\"currency\":\"USD\"},\"list_price\":{\"amount\":3894,\"currency\":\"USD\"},\"availability\":{\"available\":true},\"options\":[{\"name\":\"Title\",\"label\":\"Default Title\"}],\"media\":[{\"type\":\"image\",\"url\":\"https://cdn.shopify.com/s/files/1/0649/4155/5787/files/TBNC_Numbing_Cream_XL_4_1a1471aa-a255-4574-8b91-f883e7e083f1.jpg?v=1782788453\"}],\"requires\":{\"shipping\":true},\"checkout_url\":\"https://nba0ey-th.myshopify.com/cart/42212221583435:1\"}],\"options\":[{\"name\":\"Title\",\"values\":[{\"label\":\"Default Title\"}]}],\"media\":[{\"type\":\"image\",\"url\":\"https://cdn.shopify.com/s/files/1/0649/4155/5787/files/TBNC_Numbing_Cream_XL_4_1a1471aa-a255-4574-8b91-f883e7e083f1.jpg?v=1782788453\",\"alt_text\":\"Tattoo Numbing Cream XL - TaTTTy\"}],\"categories\":[{\"value\":\"gid://shopify/TaxonomyCategory/hb-1-8\",\"taxonomy\":\"shopify\"}],\"tags\":[\"Shopify Collective\",\"The Best Numbing Cream\"],\"gift_card\":false,\"collections\":[{\"id\":\"gid://shopify/Collection/292815372363\",\"handle\":\"shop\",\"title\":\"Tattoo Numbing Creams\",\"description\":{\"html\":\"Effortless Tattoo Care and Numbing Solutions for Your Artwork Welcome to our curated collection of tattoo care and numbing solutions, designed to enhance your experience from your first ink to its final touch. Our products are here to make the aftercare process seamless, so you can focus on showcasing your beautiful tattoos without any discomfort.\"}},{\"id\":\"gid://shopify/Collection/296572878923\",\"handle\":\"recently-added\",\"title\":\"Recently Added\",\"description\":{\"html\":\"Fresh tattoo designs added to the catalog — check back often for new drops.\"}}]},{\"id\":\"gid://shopify/Product/7904088686667\",\"title\":\"Tattoo Numbing Cream - 2 oz\",\"description\":{\"html\":\"TBNC Tattoo Numbing Cream MAX 2oz – Extra Strength, Extra Size, Maximum Comfort Take your tattoo experience to the next level with TBNC Tattoo Numbing Cream MAX 2oz — our most powerful and long-lasting formula designed for serious sessions. At 6x larger than the standard TBNC tube, this MAX size is built for extended tattoos, large-scale pieces, and clients who demand consistent comfort from start to finish. 🔥 Why Choose TBNC MAX 2oz? ✔ 6X Bigger SizeNo more running out mid-session. This 2oz tub gives you significantly more coverage compared to the standard TBNC numbing cream, making it ideal for sleeves, back pieces, and multi-hour work. ✔ Maximum Strength FormulaEngineered for deep numbing power, TBNC MAX helps reduce pain, irritation, and discomfort so you can stay relaxed and focused throughout your tattoo session. ✔ Long-Lasting Numbing EffectExperience hours of relief with a fast-acting lidocaine formula that penetrates quickly and keeps working — perfect for both beginners and seasoned tattoo collectors. ✔ Smooth, Non-Greasy ApplicationApplies easily and absorbs efficiently into the skin without leaving a heavy residue, making it artist-friendly and easy to work with. ✔ Professional Grade QualityTrusted by tattoo artists and clients alike, TBNC delivers consistent results you can rely on every time. 💉 Perfect For: Large tattoos \\u0026 long sessions Sensitive areas First-time clients Cover-ups and detailed work 🧴 How to Use: Clean and dry the area thoroughly Apply a thick layer of TBNC MAX cream Cover with plastic wrap for best absorption Wait 60 minutes before your session Wipe off and begin tattooing ASAP You can find detailed instructions HERE ⚡ Upgrade Your Tattoo Experience Don’t settle for small tubes that fall short. TBNC Tattoo Numbing Cream MAX 2oz delivers more product, more power, and more comfort — exactly what you need for your biggest tattoo projects. 🛒 Key Features: Size: 2oz (6x larger than our standard tube and 2x larger than our XL tube) Fast-acting \\u0026 long-lasting Extra strength numbing formula Ideal for large tattoos and extended sessions Registered with the FDA NDC Code: 87562-001-01 Get through your tattoo session with confidence and comfort using TBNC MAX — when standard just isn’t enough.\"},\"url\":\"https://tattty.com/products/tattoo-numbing-cream-max\",\"handle\":\"tattoo-numbing-cream-max\",\"price_range\":{\"min\":{\"amount\":3894,\"currency\":\"USD\"},\"max\":{\"amount\":3894,\"currency\":\"USD\"}},\"list_price_range\":{\"min\":{\"amount\":4544,\"currency\":\"USD\"},\"max\":{\"amount\":4544,\"currency\":\"USD\"}},\"variants\":[{\"id\":\"gid://shopify/ProductVariant/42723862872139\",\"sku\":\"602581867739\",\"title\":\"Default Title\",\"description\":{\"html\":\"TBNC Tattoo Numbing Cream MAX 2oz – Extra Strength, Extra Size, Maximum Comfort Take your tattoo experience to the next level with TBNC Tattoo Numbing Cream MAX 2oz — our most powerful and long-lasting formula designed for serious sessions. At 6x larger than the standard TBNC tube, this MAX size is built for extended tattoos, large-scale pieces, and clients who demand consistent comfort from start to finish. 🔥 Why Choose TBNC MAX 2oz? ✔ 6X Bigger SizeNo more running out mid-session. This 2oz tub gives you significantly more coverage compared to the standard TBNC numbing cream, making it ideal for sleeves, back pieces, and multi-hour work. ✔ Maximum Strength FormulaEngineered for deep numbing power, TBNC MAX helps reduce pain, irritation, and discomfort so you can stay relaxed and focused throughout your tattoo session. ✔ Long-Lasting Numbing EffectExperience hours of relief with a fast-acting lidocaine formula that penetrates quickly and keeps working — perfect for both beginners and seasoned tattoo collectors. ✔ Smooth, Non-Greasy ApplicationApplies easily and absorbs efficiently into the skin without leaving a heavy residue, making it artist-friendly and easy to work with. ✔ Professional Grade QualityTrusted by tattoo artists and clients alike, TBNC delivers consistent results you can rely on every time. 💉 Perfect For: Large tattoos \\u0026 long sessions Sensitive areas First-time clients Cover-ups and detailed work 🧴 How to Use: Clean and dry the area thoroughly Apply a thick layer of TBNC MAX cream Cover with plastic wrap for best absorption Wait 60 minutes before your session Wipe off and begin tattooing ASAP You can find detailed instructions HERE ⚡ Upgrade Your Tattoo Experience Don’t settle for small tubes that fall short. TBNC Tattoo Numbing Cream MAX 2oz delivers more product, more power, and more comfort — exactly what you need for your biggest tattoo projects. 🛒 Key Features: Size: 2oz (6x larger than our standard tube and 2x larger than our XL tube) Fast-acting \\u0026 long-lasting Extra strength numbing formula Ideal for large tattoos and extended sessions Registered with the FDA NDC Code: 87562-001-01 Get through your tattoo session with confidence and comfort using TBNC MAX — when standard just isn’t enough.\"},\"price\":{\"amount\":3894,\"currency\":\"USD\"},\"list_price\":{\"amount\":4544,\"currency\":\"USD\"},\"availability\":{\"available\":true},\"options\":[{\"name\":\"Title\",\"label\":\"Default Title\"}],\"media\":[{\"type\":\"image\",\"url\":\"https://cdn.shopify.com/s/files/1/0649/4155/5787/files/TBNC_Tattoo_Numbing_Cream_1.jpg?v=1782504458\"}],\"requires\":{\"shipping\":true},\"checkout_url\":\"https://nba0ey-th.myshopify.com/cart/42723862872139:1\"}],\"options\":[{\"name\":\"Title\",\"values\":[{\"label\":\"Default Title\"}]}],\"media\":[{\"type\":\"image\",\"url\":\"https://cdn.shopify.com/s/files/1/0649/4155/5787/files/TBNC_Tattoo_Numbing_Cream_1.jpg?v=1782504458\",\"alt_text\":\"Tattoo Numbing Cream MAX - TaTTTy\"}],\"categories\":[{\"value\":\"gid://shopify/TaxonomyCategory/hb-1-8\",\"taxonomy\":\"shopify\"}],\"tags\":[\"Shopify Collective\",\"The Best Numbing Cream\"],\"gift_card\":false,\"collections\":[{\"id\":\"gid://shopify/Collection/296572878923\",\"handle\":\"recently-added\",\"title\":\"Recently Added\",\"description\":{\"html\":\"Fresh tattoo designs added to the catalog — check back often for new drops.\"}}]},{\"id\":\"gid://shopify/Product/7904088653899\",\"title\":\"Tattoo Numbing Cream XL - 2 Pack\",\"description\":{\"html\":\"TBNC Tattoo Numbing Cream XL — 2 Pack Extra strength. Extra size. Double the comfort. The TBNC Tattoo Numbing Cream XL 2 Pack gives artists and clients more of the powerful, long-lasting topical numbing they need for larger pieces or multi-session work — two full-size tubes, ready when you are. Why customers choose TBNC XL Extra-large tubes: More product per tube for extended sessions and larger coverage. Fast-acting relief: Formulated to reduce surface pain and sensitivity so artists can work with fewer interruptions. Easy to apply: Smooth, non-greasy texture spreads evenly and wipes off cleanly when desired. Value pack: Two XL tubes — perfect for busy studios, long sessions, or for keeping one at the shop and one at home. Product details Contains: 2 × TBNC Tattoo Numbing Cream XL (full-size tubes) Form: Topical numbing cream Use: Pre- and mid-session topical numbing for tattoo procedures Storage: Store in a cool, dry place away from direct sunlight How to use Clean and dry the treatment area thoroughly. Apply a thick, even layer of TBNC cream to the skin. Wrap in saran wrap and leave on for 1 hour. Wipe away excess before beginning work. Safety \\u0026 warnings For external use only. Avoid contact with eyes, open wounds, and mucous membranes. Keep out of reach of children. If pregnant, nursing, or under a physician’s care, consult a healthcare professional before use. Discontinue use and seek medical attention if irritation, rash, or severe reactions occur. Frequently asked — quick answers Is the 2 pack good for long sessions? Yes — two XL tubes give you extra coverage so you can comfortably handle larger pieces or multiple appointments. Will it affect tattoo ink? TBNC is formulated to be compatible with tattoo procedures when used as directed. Always follow your artist’s protocol. Ready for longer sessions? Grab the TBNC Tattoo Numbing Cream XL 2 Pack and give your clients (and yourself) the comfort boost you need — stock up and stay prepared.\"},\"url\":\"https://tattty.com/products/tattoo-numbing-cream-xl-2-pack\",\"handle\":\"tattoo-numbing-cream-xl-2-pack\",\"price_range\":{\"min\":{\"amount\":5194,\"currency\":\"USD\"},\"max\":{\"amount\":5194,\"currency\":\"USD\"}},\"list_price_range\":{\"min\":{\"amount\":0,\"currency\":\"USD\"},\"max\":{\"amount\":0,\"currency\":\"USD\"}},\"variants\":[{\"id\":\"gid://shopify/ProductVariant/42723862839371\",\"sku\":\"602581867661\",\"title\":\"Default Title\",\"description\":{\"html\":\"TBNC Tattoo Numbing Cream XL — 2 Pack Extra strength. Extra size. Double the comfort. The TBNC Tattoo Numbing Cream XL 2 Pack gives artists and clients more of the powerful, long-lasting topical numbing they need for larger pieces or multi-session work — two full-size tubes, ready when you are. Why customers choose TBNC XL Extra-large tubes: More product per tube for extended sessions and larger coverage. Fast-acting relief: Formulated to reduce surface pain and sensitivity so artists can work with fewer interruptions. Easy to apply: Smooth, non-greasy texture spreads evenly and wipes off cleanly when desired. Value pack: Two XL tubes — perfect for busy studios, long sessions, or for keeping one at the shop and one at home. Product details Contains: 2 × TBNC Tattoo Numbing Cream XL (full-size tubes) Form: Topical numbing cream Use: Pre- and mid-session topical numbing for tattoo procedures Storage: Store in a cool, dry place away from direct sunlight How to use Clean and dry the treatment area thoroughly. Apply a thick, even layer of TBNC cream to the skin. Wrap in saran wrap and leave on for 1 hour. Wipe away excess before beginning work. Safety \\u0026 warnings For external use only. Avoid contact with eyes, open wounds, and mucous membranes. Keep out of reach of children. If pregnant, nursing, or under a physician’s care, consult a healthcare professional before use. Discontinue use and seek medical attention if irritation, rash, or severe reactions occur. Frequently asked — quick answers Is the 2 pack good for long sessions? Yes — two XL tubes give you extra coverage so you can comfortably handle larger pieces or multiple appointments. Will it affect tattoo ink? TBNC is formulated to be compatible with tattoo procedures when used as directed. Always follow your artist’s protocol. Ready for longer sessions? Grab the TBNC Tattoo Numbing Cream XL 2 Pack and give your clients (and yourself) the comfort boost you need — stock up and stay prepared.\"},\"price\":{\"amount\":5194,\"currency\":\"USD\"},\"availability\":{\"available\":true},\"options\":[{\"name\":\"Title\",\"label\":\"Default Title\"}],\"media\":[{\"type\":\"image\",\"url\":\"https://cdn.shopify.com/s/files/1/0649/4155/5787/files/Tattoo_Numbing_Cream_XL_-_2pack.jpg?v=1782504459\"}],\"requires\":{\"shipping\":true},\"checkout_url\":\"https://nba0ey-th.myshopify.com/cart/42723862839371:1\"}],\"options\":[{\"name\":\"Title\",\"values\":[{\"label\":\"Default Title\"}]}],\"media\":[{\"type\":\"image\",\"url\":\"https://cdn.shopify.com/s/files/1/0649/4155/5787/files/Tattoo_Numbing_Cream_XL_-_2pack.jpg?v=1782504459\",\"alt_text\":\"Tattoo Numbing Cream XL - 2 Pack - TaTTTy\"}],\"categories\":[{\"value\":\"gid://shopify/TaxonomyCategory/hb-1-8\",\"taxonomy\":\"shopify\"}],\"tags\":[\"Shopify Collective\",\"The Best Numbing Cream\"],\"gift_card\":false,\"collections\":[{\"id\":\"gid://shopify/Collection/296572878923\",\"handle\":\"recently-added\",\"title\":\"Recently Added\",\"description\":{\"html\":\"Fresh tattoo designs added to the catalog — check back often for new drops.\"}}]},{\"id\":\"gid://shopify/Product/7622254002251\",\"title\":\"Tattoo Numbing Gel - Mid Session\",\"description\":{\"html\":\"Mid Session TBNC Tattoo Numbing Gel – Instant Relief When You Need It Most Power through your tattoo session with confidence using Mid Session TBNC Tattoo Numbing Gel—the ultimate solution for fast, effective pain relief while you're already being tattooed. Designed specifically for mid-session use, this powerful numbing gel penetrates quickly and works fast to keep you comfortable without interrupting your artist’s flow. Whether you're tackling a large piece or just reaching your limit, TBNC’s mid-session formula delivers targeted relief right when you need it. No pre-session waiting, no numbing cream required—just apply it to open skin and feel the difference in minutes. ✅ Key Features: Mid-Session Application: Use during your tattoo, not before Fast-Acting Relief: Starts working within minutes Long-Lasting Comfort: Keeps the pain at bay for extended sessions Lidocaine-Powered Formula: Maximum strength for serious numbing Artist-Tested, Client-Approved: Won’t disrupt ink or healing Safe, Clean, and Effective: Crafted with tattoo professionals in mind 💡 Why Choose TBNC Mid Session Gel? Unlike traditional numbing creams, TBNC's mid-session gel is specifically designed to be applied after the skin is broken, allowing it to take effect instantly during long or painful sessions. It's perfect for touch-ups, color fill-ins, or those final painful hours when your skin starts getting sensitive. ❔ How To Use TBNC Numbing Gel? Place TBNC Numbing Gel on your tattoo mid session Wrap tattoo in saran wrap for 10-20 minutes Wipe off and continue tattoo session 🔒 Trusted by Tattoo Professionals TBNC is a name trusted by artists and clients alike. Whether you're a professional studio or a first-time client, this gel is a must-have in your tattoo care kit. Stay strong, sit longer, and get the tattoo you really want—with Mid Session TBNC Tattoo Numbing Gel. TBNC Tattoo Numbing Gel | Lidocaine Tattoo Numbing | Fast-Acting Tattoo Pain Relief Gel | Tattoo Numbing Gel | Long-Lasting Comfort for Tattoo Sessions | Tattoo-Artist Approved | Veteran-Owned Tattoo Brand in Florida.\"},\"url\":\"https://tattty.com/products/tattoo-numbing-gel-mid-session\",\"handle\":\"tattoo-numbing-gel-mid-session\",\"price_range\":{\"min\":{\"amount\":2204,\"currency\":\"USD\"},\"max\":{\"amount\":2204,\"currency\":\"USD\"}},\"list_price_range\":{\"min\":{\"amount\":0,\"currency\":\"USD\"},\"max\":{\"amount\":0,\"currency\":\"USD\"}},\"variants\":[{\"id\":\"gid://shopify/ProductVariant/42212221419595\",\"sku\":\"602581867630\",\"title\":\"Default Title\",\"description\":{\"html\":\"Mid Session TBNC Tattoo Numbing Gel – Instant Relief When You Need It Most Power through your tattoo session with confidence using Mid Session TBNC Tattoo Numbing Gel—the ultimate solution for fast, effective pain relief while you're already being tattooed. Designed specifically for mid-session use, this powerful numbing gel penetrates quickly and works fast to keep you comfortable without interrupting your artist’s flow. Whether you're tackling a large piece or just reaching your limit, TBNC’s mid-session formula delivers targeted relief right when you need it. No pre-session waiting, no numbing cream required—just apply it to open skin and feel the difference in minutes. ✅ Key Features: Mid-Session Application: Use during your tattoo, not before Fast-Acting Relief: Starts working within minutes Long-Lasting Comfort: Keeps the pain at bay for extended sessions Lidocaine-Powered Formula: Maximum strength for serious numbing Artist-Tested, Client-Approved: Won’t disrupt ink or healing Safe, Clean, and Effective: Crafted with tattoo professionals in mind 💡 Why Choose TBNC Mid Session Gel? Unlike traditional numbing creams, TBNC's mid-session gel is specifically designed to be applied after the skin is broken, allowing it to take effect instantly during long or painful sessions. It's perfect for touch-ups, color fill-ins, or those final painful hours when your skin starts getting sensitive. ❔ How To Use TBNC Numbing Gel? Place TBNC Numbing Gel on your tattoo mid session Wrap tattoo in saran wrap for 10-20 minutes Wipe off and continue tattoo session 🔒 Trusted by Tattoo Professionals TBNC is a name trusted by artists and clients alike. Whether you're a professional studio or a first-time client, this gel is a must-have in your tattoo care kit. Stay strong, sit longer, and get the tattoo you really want—with Mid Session TBNC Tattoo Numbing Gel. TBNC Tattoo Numbing Gel | Lidocaine Tattoo Numbing | Fast-Acting Tattoo Pain Relief Gel | Tattoo Numbing Gel | Long-Lasting Comfort for Tattoo Sessions | Tattoo-Artist Approved | Veteran-Owned Tattoo Brand in Florida.\"},\"price\":{\"amount\":2204,\"currency\":\"USD\"},\"availability\":{\"available\":true},\"options\":[{\"name\":\"Title\",\"label\":\"Default Title\"}],\"media\":[{\"type\":\"image\",\"url\":\"https://cdn.shopify.com/s/files/1/0649/4155/5787/files/TBNC_Numbing_Gel.jpg?v=1782788453\"}],\"requires\":{\"shipping\":true},\"checkout_url\":\"https://nba0ey-th.myshopify.com/cart/42212221419595:1\"}],\"options\":[{\"name\":\"Title\",\"values\":[{\"label\":\"Default Title\"}]}],\"media\":[{\"type\":\"image\",\"url\":\"https://cdn.shopify.com/s/files/1/0649/4155/5787/files/TBNC_Numbing_Gel.jpg?v=1782788453\",\"alt_text\":\"Tattoo Numbing Gel - Mid Session - TaTTTy\"}],\"categories\":[{\"value\":\"gid://shopify/TaxonomyCategory/hb-1-8\",\"taxonomy\":\"shopify\"}],\"tags\":[\"Shopify Collective\",\"The Best Numbing Cream\"],\"gift_card\":false,\"collections\":[{\"id\":\"gid://shopify/Collection/292815372363\",\"handle\":\"shop\",\"title\":\"Tattoo Numbing Creams\",\"description\":{\"html\":\"Effortless Tattoo Care and Numbing Solutions for Your Artwork Welcome to our curated collection of tattoo care and numbing solutions, designed to enhance your experience from your first ink to its final touch. Our products are here to make the aftercare process seamless, so you can focus on showcasing your beautiful tattoos without any discomfort.\"}},{\"id\":\"gid://shopify/Collection/296572878923\",\"handle\":\"recently-added\",\"title\":\"Recently Added\",\"description\":{\"html\":\"Fresh tattoo designs added to the catalog — check back often for new drops.\"}}]},{\"id\":\"gid://shopify/Product/7622254198859\",\"title\":\"XL Tattoo Numbing Bundle\",\"description\":{\"html\":\"TBNC XL Tattoo Numbing Bundle – Cream XL + Spray + Gel Make long sessions feel short. Our XL Tattoo Numbing Bundle pairs the TBNC Tattoo Numbing Cream XL with our fast-acting Tattoo Numbing Spray and cooling Tattoo Numbing Gel—a complete before, during, and mid-session comfort system designed for bigger pieces and longer sits. What’s Included TBNC Tattoo Numbing Cream XL – Extra-large tube (3x the size of our regular tube) for full prep and large-area coverage. Tattoo Numbing Spray – Quick top-up relief between passes on broken skin. Tattoo Numbing Gel – Numbing glide to help extend comfort mid-session. Why You’ll Love It Full-session system: Prep with cream, maintain with spray, and reinforce with gel. XL capacity: Ample product for sleeves, backs, or multi-hour appointments. Artist-friendly: Non-greasy prep, easy reapplication between passes. Fast acting: Targets sensation quickly when you need it most. How to Use Prep (Cream XL)Clean and dry the area. Apply a generous, even layer of cream 45–60 minutes before your appointment. Cover with plastic film (saran wrap). Remove film and wipe clean just before tattooing. Maintain (Spray)During breaks on broken skin, lightly mist the area and allow 5–10 minutes in saran wrap before resuming. Use as needed between passes. Reinforce (Gel)Apply a thin layer to the tattooed area mid-session to help extend comfort and glide. Patch test 24 hours prior to use. Follow your artist’s guidance. Ideal For Large pieces (sleeves, back/leg work) and longer sessions Clients seeking a complete numbing routine from start to finish Key Details Skin type: For external use only Scent: Clean, light, and studio-friendly. Compatibility: Works with standard stencil products and professional tattoo inks. Ingredients \\u0026 Safety Formulated with topical anesthetic actives and soothing agents lidocaine. Avoid eyes, mouth, and mucous membranes. Do not use if allergic to any ingredient or if you have specific medical conditions that conflict with topical anesthetics. Discontinue use if irritation occurs and consult a professional. FAQs How long does the effect last?Prep cream typically provides the longest baseline comfort; spray and gel help extend relief mid-session. Results vary by skin, placement, and session length. Can my artist apply it?Many studios allow client prep; always confirm with your artist and follow their protocol. Will it affect the stencil?When used as directed and fully cleaned before tattooing, stencils and inks perform normally. What Artists Say “A reliable prep + maintain combo that keeps clients calmer and sessions smoother.” Bundle Benefits Save vs. buying individually Fewer interruptions thanks to targeted re-ups Confidence for first-timers and marathon sessions alike\"},\"url\":\"https://tattty.com/products/xl-tattoo-numbing-bundle\",\"handle\":\"xl-tattoo-numbing-bundle\",\"price_range\":{\"min\":{\"amount\":6494,\"currency\":\"USD\"},\"max\":{\"amount\":6494,\"currency\":\"USD\"}},\"list_price_range\":{\"min\":{\"amount\":0,\"currency\":\"USD\"},\"max\":{\"amount\":0,\"currency\":\"USD\"}},\"variants\":[{\"id\":\"gid://shopify/ProductVariant/42212221517899\",\"sku\":\"602581867654\",\"title\":\"Default Title\",\"description\":{\"html\":\"TBNC XL Tattoo Numbing Bundle – Cream XL + Spray + Gel Make long sessions feel short. Our XL Tattoo Numbing Bundle pairs the TBNC Tattoo Numbing Cream XL with our fast-acting Tattoo Numbing Spray and cooling Tattoo Numbing Gel—a complete before, during, and mid-session comfort system designed for bigger pieces and longer sits. What’s Included TBNC Tattoo Numbing Cream XL – Extra-large tube (3x the size of our regular tube) for full prep and large-area coverage. Tattoo Numbing Spray – Quick top-up relief between passes on broken skin. Tattoo Numbing Gel – Numbing glide to help extend comfort mid-session. Why You’ll Love It Full-session system: Prep with cream, maintain with spray, and reinforce with gel. XL capacity: Ample product for sleeves, backs, or multi-hour appointments. Artist-friendly: Non-greasy prep, easy reapplication between passes. Fast acting: Targets sensation quickly when you need it most. How to Use Prep (Cream XL)Clean and dry the area. Apply a generous, even layer of cream 45–60 minutes before your appointment. Cover with plastic film (saran wrap). Remove film and wipe clean just before tattooing. Maintain (Spray)During breaks on broken skin, lightly mist the area and allow 5–10 minutes in saran wrap before resuming. Use as needed between passes. Reinforce (Gel)Apply a thin layer to the tattooed area mid-session to help extend comfort and glide. Patch test 24 hours prior to use. Follow your artist’s guidance. Ideal For Large pieces (sleeves, back/leg work) and longer sessions Clients seeking a complete numbing routine from start to finish Key Details Skin type: For external use only Scent: Clean, light, and studio-friendly. Compatibility: Works with standard stencil products and professional tattoo inks. Ingredients \\u0026 Safety Formulated with topical anesthetic actives and soothing agents lidocaine. Avoid eyes, mouth, and mucous membranes. Do not use if allergic to any ingredient or if you have specific medical conditions that conflict with topical anesthetics. Discontinue use if irritation occurs and consult a professional. FAQs How long does the effect last?Prep cream typically provides the longest baseline comfort; spray and gel help extend relief mid-session. Results vary by skin, placement, and session length. Can my artist apply it?Many studios allow client prep; always confirm with your artist and follow their protocol. Will it affect the stencil?When used as directed and fully cleaned before tattooing, stencils and inks perform normally. What Artists Say “A reliable prep + maintain combo that keeps clients calmer and sessions smoother.” Bundle Benefits Save vs. buying individually Fewer interruptions thanks to targeted re-ups Confidence for first-timers and marathon sessions alike\"},\"price\":{\"amount\":6494,\"currency\":\"USD\"},\"availability\":{\"available\":true},\"options\":[{\"name\":\"Title\",\"label\":\"Default Title\"}],\"media\":[{\"type\":\"image\",\"url\":\"https://cdn.shopify.com/s/files/1/0649/4155/5787/files/TBNC_Tattoo_Numbing_Cream_XL_Kit_6792d145-c4c6-446f-a1f2-7bf6d4a17933.jpg?v=1782902443\"}],\"requires\":{\"shipping\":true},\"checkout_url\":\"https://nba0ey-th.myshopify.com/cart/42212221517899:1\"}],\"options\":[{\"name\":\"Title\",\"values\":[{\"label\":\"Default Title\"}]}],\"media\":[{\"type\":\"image\",\"url\":\"https://cdn.shopify.com/s/files/1/0649/4155/5787/files/TBNC_Tattoo_Numbing_Cream_XL_Kit_6792d145-c4c6-446f-a1f2-7bf6d4a17933.jpg?v=1782902443\",\"alt_text\":\"XL Tattoo Numbing Bundle - TaTTTy\"}],\"categories\":[{\"value\":\"gid://shopify/TaxonomyCategory/hb-1-8\",\"taxonomy\":\"shopify\"}],\"tags\":[\"Shopify Collective\",\"The Best Numbing Cream\"],\"gift_card\":false,\"collections\":[{\"id\":\"gid://shopify/Collection/292815372363\",\"handle\":\"shop\",\"title\":\"Tattoo Numbing Creams\",\"description\":{\"html\":\"Effortless Tattoo Care and Numbing Solutions for Your Artwork Welcome to our curated collection of tattoo care and numbing solutions, designed to enhance your experience from your first ink to its final touch. Our products are here to make the aftercare process seamless, so you can focus on showcasing your beautiful tattoos without any discomfort.\"}},{\"id\":\"gid://shopify/Collection/296572878923\",\"handle\":\"recently-added\",\"title\":\"Recently Added\",\"description\":{\"html\":\"Fresh tattoo designs added to the catalog — check back often for new drops.\"}}]},{\"id\":\"gid://shopify/Product/7622253936715\",\"title\":\"Tattoo Numbing Spray - Mid Session\",\"description\":{\"html\":\"Whether you forgot to use our Numbing Cream or it’s starting to wear off, TBNC Tattoo Numbing Spray is perfect to apply mid-session (even on broken skin). Get a bottle so you don’t tap out mid-tattoo. TBNC Tattoo Numbing Spray – Maximum Strength, Fast-Acting Relief for Painless Ink Sessions Get tattooed with confidence and comfort using TBNC Tattoo Numbing Spray – the ultimate solution for pain-free ink sessions. Designed with high-strength lidocaine, this fast-acting numbing spray delivers deep, long-lasting relief, making it perfect for tattoos, piercings, microblading, and cosmetic procedures. Why Choose TBNC Tattoo Numbing Spray? ✅ Maximum Strength Formula – Infused with powerful lidocaine for intense numbing relief.✅ Fast-Acting \\u0026 Long-Lasting – Numbs skin in minutes and keeps discomfort at bay for hours.✅ Spray-On Convenience – Easy-to-use, mess-free application for precise pain control.✅ Perfect for All Skin Types – Gentle yet effective, ideal for sensitive areas.✅ Trusted by Professionals – Used by tattoo artists, piercers, and cosmetic experts. *Please note that TBNC Tattoo Numbing Spray is safe for use during procedures AND will only work on OPEN or BROKEN SKIN. Please use our numbing cream to get numb before your tattoo session. Test on skin to make sure there are no allergic reactions before using. How To Use: 1. Spray sparingly (2-4 pumps) on broken skin throughout tattoo session.2. Plastic wrap and allow to absorb for 5-10 minutes. 3. Re-apply as needed\"},\"url\":\"https://tattty.com/products/tattoo-numbing-spray-mid-session\",\"handle\":\"tattoo-numbing-spray-mid-session\",\"price_range\":{\"min\":{\"amount\":2464,\"currency\":\"USD\"},\"max\":{\"amount\":2464,\"currency\":\"USD\"}},\"list_price_range\":{\"min\":{\"amount\":0,\"currency\":\"USD\"},\"max\":{\"amount\":0,\"currency\":\"USD\"}},\"variants\":[{\"id\":\"gid://shopify/ProductVariant/42212221354059\",\"sku\":\"791126067199\",\"title\":\"Default Title\",\"description\":{\"html\":\"Whether you forgot to use our Numbing Cream or it’s starting to wear off, TBNC Tattoo Numbing Spray is perfect to apply mid-session (even on broken skin). Get a bottle so you don’t tap out mid-tattoo. TBNC Tattoo Numbing Spray – Maximum Strength, Fast-Acting Relief for Painless Ink Sessions Get tattooed with confidence and comfort using TBNC Tattoo Numbing Spray – the ultimate solution for pain-free ink sessions. Designed with high-strength lidocaine, this fast-acting numbing spray delivers deep, long-lasting relief, making it perfect for tattoos, piercings, microblading, and cosmetic procedures. Why Choose TBNC Tattoo Numbing Spray? ✅ Maximum Strength Formula – Infused with powerful lidocaine for intense numbing relief.✅ Fast-Acting \\u0026 Long-Lasting – Numbs skin in minutes and keeps discomfort at bay for hours.✅ Spray-On Convenience – Easy-to-use, mess-free application for precise pain control.✅ Perfect for All Skin Types – Gentle yet effective, ideal for sensitive areas.✅ Trusted by Professionals – Used by tattoo artists, piercers, and cosmetic experts. *Please note that TBNC Tattoo Numbing Spray is safe for use during procedures AND will only work on OPEN or BROKEN SKIN. Please use our numbing cream to get numb before your tattoo session. Test on skin to make sure there are no allergic reactions before using. How To Use: 1. Spray sparingly (2-4 pumps) on broken skin throughout tattoo session.2. Plastic wrap and allow to absorb for 5-10 minutes. 3. Re-apply as needed\"},\"price\":{\"amount\":2464,\"currency\":\"USD\"},\"availability\":{\"available\":true},\"options\":[{\"name\":\"Title\",\"label\":\"Default Title\"}],\"media\":[{\"type\":\"image\",\"url\":\"https://cdn.shopify.com/s/files/1/0649/4155/5787/files/TBNC_Tattoo_Numbing_Spray_1.jpg?v=1783999469\"}],\"requires\":{\"shipping\":true},\"checkout_url\":\"https://nba0ey-th.myshopify.com/cart/42212221354059:1\"}],\"options\":[{\"name\":\"Title\",\"values\":[{\"label\":\"Default Title\"}]}],\"media\":[{\"type\":\"image\",\"url\":\"https://cdn.shopify.com/s/files/1/0649/4155/5787/files/TBNC_Tattoo_Numbing_Spray_1.jpg?v=1783999469\",\"alt_text\":\"Tattoo Numbing Spray - Mid Session\"}],\"categories\":[{\"value\":\"gid://shopify/TaxonomyCategory/hb-1-8\",\"taxonomy\":\"shopify\"}],\"tags\":[\"Shopify Collective\",\"The Best Numbing Cream\"],\"gift_card\":false,\"collections\":[{\"id\":\"gid://shopify/Collection/292815372363\",\"handle\":\"shop\",\"title\":\"Tattoo Numbing Creams\",\"description\":{\"html\":\"Effortless Tattoo Care and Numbing Solutions for Your Artwork Welcome to our curated collection of tattoo care and numbing solutions, designed to enhance your experience from your first ink to its final touch. Our products are here to make the aftercare process seamless, so you can focus on showcasing your beautiful tattoos without any discomfort.\"}},{\"id\":\"gid://shopify/Collection/296572878923\",\"handle\":\"recently-added\",\"title\":\"Recently Added\",\"description\":{\"html\":\"Fresh tattoo designs added to the catalog — check back often for new drops.\"}}]},{\"id\":\"gid://shopify/Product/8099939876939\",\"title\":\"Kamikaze Tattoo Numbing Glide\",\"description\":{\"html\":\"Kamikaze Tattoo Artist Glide, the premiere tattoo glide amongst tattoo professionals! Crafted with care in the USA, our 8 oz. jar packs a powerful punch with 380mg of hemp tattoo cream, boasting a maximum 5% lidocaine content to elevate your artistry to new heights. Scented delicately, from unscented to a subtle citrus note, our natural and organic formula blends the soothing properties of hemp, premium hydrating oils, nourishing butters, and lidocaine for a fast-acting, lightweight, and non-greasy solution. Bid farewell to globs of glide on your tray – our super-concentrated formula ensures a little goes a long way, delivering a therapeutic tattoo experience every time. Kamikaze Tattoo Artist Glide is the ultimate solution for tattoo artists seeking unparalleled performance and versatility. Engineered to meet the highest standards of tattooing, it encompasses all the essential features artists look for in a tattoo glide and goes above and beyond. With its smooth lubrication, long-lasting formula, and non-sticky consistency, Kamikaze ensures seamless tattooing sessions without interruption. But that's just the beginning – Kamikaze Tattoo Glide offers a plethora of additional benefits, including enhanced moisturization for vibrant tattoos, effortless cleanup, and compatibility with all skin types, even the most sensitive. With Kamikaze Tattoo Glide, artists can elevate their craft to new heights, delivering exceptional results and unparalleled client satisfaction. Smooth Gliding Hemp: Allow our non-greasy, all-natural hemp extract and therapeutic hydrating oils to soothe pains and ease your client's discomfort, enabling longer sessions without compromising on glide or clarity. Silence the Screams: Strike the perfect balance with our glide's consistency – thick enough for superior glide, yet thin enough for your client to feel the needle's vibration. Calm and numb skin irritation to extend session durations effortlessly. Hemp, Lidocaine, Jojoba Butter, Argan Oil, are just a few powerful ingredients that work in harmony to ease, soothe, moisturize ensuring a comfortable and hygienic tattooing experience. Perfect for Stencil Longevity Kamikaze ensures your stencil stays intact until the final stroke, ensuring seamless completion of your artistry. For Tattoo Professionals Endorsed by tattooers, for tattooers. Our thoughtfully curated blend minimizes pooling, client discomfort, and clogged needles, allowing you to unleash your creativity effortlessly. Capture Amazing Photos Say goodbye to swelling and redness post-session, capturing your art in its full glory. Client Comfort Use as your tattoo glide throughout the entire session for maximum client relief. Please note, this product does not provide numbing prior to linework and should not be used as such. Consult a medical professional before using products containing lidocaine. Elevate your tattooing game with Kamikaze Tattoo Artist Glide – where comfort meets creativity, every time. Disclaimer: Green soap and witch hazel both contain alcohol, which can impact the efficiency of our products when used on the same tattoo. Alcohol can interfere with the effectiveness of lidocaine, potentially reducing its full numbing power when combined with green soap or witch hazel. To ensure optimal results for both the artist and client, our products are specifically designed to work in tandem. Therefore, we recommend using Samurai Foaming Soap or distilled water instead of green soap or witch hazel, to achieve the best possible outcome. Disclaimer:This product contains both Lidocaine and CBD. While these ingredients are used topically and are not intended to produce psychoactive effects, individuals in recovery from substance use disorders should exercise caution. Lidocaine and/or CBD may potentially trigger psychological associations or cravings in some individuals. If you are in recovery, please consult with your healthcare provider before using this product. Urban’s Edge does not recommend this product for those with a history of substance dependency without medical clearance. Preserving Lidocaine’s Effectiveness During Tattooing Lidocaine is a valuable tool for keeping clients comfortable, but its numbing power can be dramatically reduced depending on what is used on the skin during the tattoo process. Green Soap – Can reduce lidocaine’s effectiveness by up to 50%. The surfactants in green soap strip the lidocaine from the skin’s surface and disrupt absorption. Witch Hazel – May cut numbing power by 30–40%. Its astringent properties constrict pores and blood vessels, reducing lidocaine penetration. Alcohol – Can decrease effectiveness by 40–60%. Alcohol quickly dissolves lidocaine molecules and evaporates them off the skin. Once these products are introduced, the numbing effect drops quickly, shortening comfort time for your client. ✅ Best Practice for Maximum Effectiveness: Use distilled water or Samurai Vegan Soap for wiping and cleaning during the tattoo process. These will not break down lidocaine and allow the numbing agent to remain active longer. ❌ Avoid using green soap, witch hazel, or alcohol once lidocaine has been applied. Keeping the right environment on the skin ensures your client experiences the full benefits of lidocaine, improving both comfort and session quality.\"},\"url\":\"https://tattty.com/products/kamikaze-tattoo-numbing-glide\",\"handle\":\"kamikaze-tattoo-numbing-glide\",\"price_range\":{\"min\":{\"amount\":7800,\"currency\":\"USD\"},\"max\":{\"amount\":7800,\"currency\":\"USD\"}},\"list_price_range\":{\"min\":{\"amount\":0,\"currency\":\"USD\"},\"max\":{\"amount\":0,\"currency\":\"USD\"}},\"variants\":[{\"id\":\"gid://shopify/ProductVariant/43166148395083\",\"sku\":\"857927008691\",\"title\":\"Default Title\",\"description\":{\"html\":\"Kamikaze Tattoo Artist Glide, the premiere tattoo glide amongst tattoo professionals! Crafted with care in the USA, our 8 oz. jar packs a powerful punch with 380mg of hemp tattoo cream, boasting a maximum 5% lidocaine content to elevate your artistry to new heights. Scented delicately, from unscented to a subtle citrus note, our natural and organic formula blends the soothing properties of hemp, premium hydrating oils, nourishing butters, and lidocaine for a fast-acting, lightweight, and non-greasy solution. Bid farewell to globs of glide on your tray – our super-concentrated formula ensures a little goes a long way, delivering a therapeutic tattoo experience every time. Kamikaze Tattoo Artist Glide is the ultimate solution for tattoo artists seeking unparalleled performance and versatility. Engineered to meet the highest standards of tattooing, it encompasses all the essential features artists look for in a tattoo glide and goes above and beyond. With its smooth lubrication, long-lasting formula, and non-sticky consistency, Kamikaze ensures seamless tattooing sessions without interruption. But that's just the beginning – Kamikaze Tattoo Glide offers a plethora of additional benefits, including enhanced moisturization for vibrant tattoos, effortless cleanup, and compatibility with all skin types, even the most sensitive. With Kamikaze Tattoo Glide, artists can elevate their craft to new heights, delivering exceptional results and unparalleled client satisfaction. Smooth Gliding Hemp: Allow our non-greasy, all-natural hemp extract and therapeutic hydrating oils to soothe pains and ease your client's discomfort, enabling longer sessions without compromising on glide or clarity. Silence the Screams: Strike the perfect balance with our glide's consistency – thick enough for superior glide, yet thin enough for your client to feel the needle's vibration. Calm and numb skin irritation to extend session durations effortlessly. Hemp, Lidocaine, Jojoba Butter, Argan Oil, are just a few powerful ingredients that work in harmony to ease, soothe, moisturize ensuring a comfortable and hygienic tattooing experience. Perfect for Stencil Longevity Kamikaze ensures your stencil stays intact until the final stroke, ensuring seamless completion of your artistry. For Tattoo Professionals Endorsed by tattooers, for tattooers. Our thoughtfully curated blend minimizes pooling, client discomfort, and clogged needles, allowing you to unleash your creativity effortlessly. Capture Amazing Photos Say goodbye to swelling and redness post-session, capturing your art in its full glory. Client Comfort Use as your tattoo glide throughout the entire session for maximum client relief. Please note, this product does not provide numbing prior to linework and should not be used as such. Consult a medical professional before using products containing lidocaine. Elevate your tattooing game with Kamikaze Tattoo Artist Glide – where comfort meets creativity, every time. Disclaimer: Green soap and witch hazel both contain alcohol, which can impact the efficiency of our products when used on the same tattoo. Alcohol can interfere with the effectiveness of lidocaine, potentially reducing its full numbing power when combined with green soap or witch hazel. To ensure optimal results for both the artist and client, our products are specifically designed to work in tandem. Therefore, we recommend using Samurai Foaming Soap or distilled water instead of green soap or witch hazel, to achieve the best possible outcome. Disclaimer:This product contains both Lidocaine and CBD. While these ingredients are used topically and are not intended to produce psychoactive effects, individuals in recovery from substance use disorders should exercise caution. Lidocaine and/or CBD may potentially trigger psychological associations or cravings in some individuals. If you are in recovery, please consult with your healthcare provider before using this product. Urban’s Edge does not recommend this product for those with a history of substance dependency without medical clearance. Preserving Lidocaine’s Effectiveness During Tattooing Lidocaine is a valuable tool for keeping clients comfortable, but its numbing power can be dramatically reduced depending on what is used on the skin during the tattoo process. Green Soap – Can reduce lidocaine’s effectiveness by up to 50%. The surfactants in green soap strip the lidocaine from the skin’s surface and disrupt absorption. Witch Hazel – May cut numbing power by 30–40%. Its astringent properties constrict pores and blood vessels, reducing lidocaine penetration. Alcohol – Can decrease effectiveness by 40–60%. Alcohol quickly dissolves lidocaine molecules and evaporates them off the skin. Once these products are introduced, the numbing effect drops quickly, shortening comfort time for your client. ✅ Best Practice for Maximum Effectiveness: Use distilled water or Samurai Vegan Soap for wiping and cleaning during the tattoo process. These will not break down lidocaine and allow the numbing agent to remain active longer. ❌ Avoid using green soap, witch hazel, or alcohol once lidocaine has been applied. Keeping the right environment on the skin ensures your client experiences the full benefits of lidocaine, improving both comfort and session quality.\"},\"price\":{\"amount\":7800,\"currency\":\"USD\"},\"availability\":{\"available\":true},\"options\":[{\"name\":\"Title\",\"label\":\"Default Title\"}],\"media\":[{\"type\":\"image\",\"url\":\"https://cdn.shopify.com/s/files/1/0649/4155/5787/files/Kamikaze-Mock_up-7.png?v=1788885967\"}],\"requires\":{\"shipping\":true},\"checkout_url\":\"https://nba0ey-th.myshopify.com/cart/43166148395083:1\"}],\"options\":[{\"name\":\"Title\",\"values\":[{\"label\":\"Default Title\"}]}],\"media\":[{\"type\":\"image\",\"url\":\"https://cdn.shopify.com/s/files/1/0649/4155/5787/files/Kamikaze-Mock_up-7.png?v=1788885967\"}],\"categories\":[{\"value\":\"gid://shopify/TaxonomyCategory/bi-21-2\",\"taxonomy\":\"shopify\"}],\"tags\":[\"Shopify Collective\",\"UrbansEdgeTattoo\"],\"gift_card\":false,\"collections\":[{\"id\":\"gid://shopify/Collection/296572878923\",\"handle\":\"recently-added\",\"title\":\"Recently Added\",\"description\":{\"html\":\"Fresh tattoo designs added to the catalog — check back often for new drops.\"}},{\"id\":\"gid://shopify/Collection/299755241547\",\"handle\":\"urban-connection\",\"title\":\"Urban Connection\",\"description\":{\"html\":\"\"}}]},{\"id\":\"gid://shopify/Product/8099939811403\",\"title\":\"RONIN SOOTHING NUMBING GEL\",\"description\":{\"html\":\"Ronin Tattoo Numbing Gel – Your go-to mid-session numbing solution for a smoother tattooing experience. Formulated with 5% lidocaine and 500 mg CBD, Ronin provides fast-acting relief by reducing pain, swelling, and irritation without altering skin texture. Apply directly to freshly tattooed skin, cover with saran wrap for 15 minutes, and keep your client comfortable while you work. Elevate your sessions with Ronin—because a better experience means better results. Upholding the exceptional standards you expect from Urban's Edge. Crafted with vegan, natural, and the highest quality ingredients. Pure, powerful and designed for artists who demand the best- Ronin delivers! NOTE: This is not a pre-numb. Fast-Acting Relief – Formulated with 5% lidocaine and CBD to quickly reduce pain, swelling, and irritation during tattoo sessions. Mid-Session Application – Designed specifically to be applied mid-tattoo on broken skin for immediate comfort without disrupting your workflow. Skin-Friendly Formula – Won’t alter skin texture, ensuring smooth application and clean lines throughout the session. Simple Use – Apply directly to freshly tattooed skin, cover with saran wrap for 15 minutes, and continue tattooing with ease. Premium Quality – Crafted with vegan, natural, and high-grade ingredients that align with the elite standards of Urban’s Edge. Artist-Focused Performance – Built for professionals who demand precision and performance—because a more comfortable client means a better outcome. Disclaimer:This product contains both Lidocaine and CBD. While these ingredients are used topically and are not intended to produce psychoactive effects, individuals in recovery from substance use disorders should exercise caution. Lidocaine and/or CBD may potentially trigger psychological associations or cravings in some individuals. If you are in recovery, please consult with your healthcare provider before using this product. Urban’s Edge does not recommend this product for those with a history of substance dependency without medical clearance. Preserving Lidocaine’s Effectiveness During Tattooing Lidocaine is a valuable tool for keeping clients comfortable, but its numbing power can be dramatically reduced depending on what is used on the skin during the tattoo process. Green Soap – Can reduce lidocaine’s effectiveness by up to 50%. The surfactants in green soap strip the lidocaine from the skin’s surface and disrupt absorption. Witch Hazel – May cut numbing power by 30–40%. Its astringent properties constrict pores and blood vessels, reducing lidocaine penetration. Alcohol – Can decrease effectiveness by 40–60%. Alcohol quickly dissolves lidocaine molecules and evaporates them off the skin. Once these products are introduced, the numbing effect drops quickly, shortening comfort time for your client. ✅ Best Practice for Maximum Effectiveness: Use distilled water or Samurai Vegan Soap for wiping and cleaning during the tattoo process. These will not break down lidocaine and allow the numbing agent to remain active longer. ❌ Avoid using green soap, witch hazel, or alcohol once lidocaine has been applied. Keeping the right environment on the skin ensures your client experiences the full benefits of lidocaine, improving both comfort and session quality.\"},\"url\":\"https://tattty.com/products/ronin-soothing-numbing-gel\",\"handle\":\"ronin-soothing-numbing-gel\",\"price_range\":{\"min\":{\"amount\":9100,\"currency\":\"USD\"},\"max\":{\"amount\":9100,\"currency\":\"USD\"}},\"list_price_range\":{\"min\":{\"amount\":0,\"currency\":\"USD\"},\"max\":{\"amount\":0,\"currency\":\"USD\"}},\"variants\":[{\"id\":\"gid://shopify/ProductVariant/43166148296779\",\"sku\":\"857927008752\",\"title\":\"Plastic container\",\"description\":{\"html\":\"Ronin Tattoo Numbing Gel – Your go-to mid-session numbing solution for a smoother tattooing experience. Formulated with 5% lidocaine and 500 mg CBD, Ronin provides fast-acting relief by reducing pain, swelling, and irritation without altering skin texture. Apply directly to freshly tattooed skin, cover with saran wrap for 15 minutes, and keep your client comfortable while you work. Elevate your sessions with Ronin—because a better experience means better results. Upholding the exceptional standards you expect from Urban's Edge. Crafted with vegan, natural, and the highest quality ingredients. Pure, powerful and designed for artists who demand the best- Ronin delivers! NOTE: This is not a pre-numb. Fast-Acting Relief – Formulated with 5% lidocaine and CBD to quickly reduce pain, swelling, and irritation during tattoo sessions. Mid-Session Application – Designed specifically to be applied mid-tattoo on broken skin for immediate comfort without disrupting your workflow. Skin-Friendly Formula – Won’t alter skin texture, ensuring smooth application and clean lines throughout the session. Simple Use – Apply directly to freshly tattooed skin, cover with saran wrap for 15 minutes, and continue tattooing with ease. Premium Quality – Crafted with vegan, natural, and high-grade ingredients that align with the elite standards of Urban’s Edge. Artist-Focused Performance – Built for professionals who demand precision and performance—because a more comfortable client means a better outcome. Disclaimer:This product contains both Lidocaine and CBD. While these ingredients are used topically and are not intended to produce psychoactive effects, individuals in recovery from substance use disorders should exercise caution. Lidocaine and/or CBD may potentially trigger psychological associations or cravings in some individuals. If you are in recovery, please consult with your healthcare provider before using this product. Urban’s Edge does not recommend this product for those with a history of substance dependency without medical clearance. Preserving Lidocaine’s Effectiveness During Tattooing Lidocaine is a valuable tool for keeping clients comfortable, but its numbing power can be dramatically reduced depending on what is used on the skin during the tattoo process. Green Soap – Can reduce lidocaine’s effectiveness by up to 50%. The surfactants in green soap strip the lidocaine from the skin’s surface and disrupt absorption. Witch Hazel – May cut numbing power by 30–40%. Its astringent properties constrict pores and blood vessels, reducing lidocaine penetration. Alcohol – Can decrease effectiveness by 40–60%. Alcohol quickly dissolves lidocaine molecules and evaporates them off the skin. Once these products are introduced, the numbing effect drops quickly, shortening comfort time for your client. ✅ Best Practice for Maximum Effectiveness: Use distilled water or Samurai Vegan Soap for wiping and cleaning during the tattoo process. These will not break down lidocaine and allow the numbing agent to remain active longer. ❌ Avoid using green soap, witch hazel, or alcohol once lidocaine has been applied. Keeping the right environment on the skin ensures your client experiences the full benefits of lidocaine, improving both comfort and session quality.\"},\"price\":{\"amount\":9100,\"currency\":\"USD\"},\"availability\":{\"available\":true},\"options\":[{\"name\":\"8 oz jar\",\"label\":\"Plastic container\"}],\"media\":[{\"type\":\"image\",\"url\":\"https://cdn.shopify.com/s/files/1/0649/4155/5787/files/Ronin-Mock_Up-1.png?v=1788885963\"}],\"requires\":{\"shipping\":true},\"checkout_url\":\"https://nba0ey-th.myshopify.com/cart/43166148296779:1\"}],\"options\":[{\"name\":\"8 oz jar\",\"values\":[{\"label\":\"Plastic container\"}]}],\"media\":[{\"type\":\"image\",\"url\":\"https://cdn.shopify.com/s/files/1/0649/4155/5787/files/Ronin-Mock_Up-1.png?v=1788885963\"}],\"categories\":[{\"value\":\"gid://shopify/TaxonomyCategory/bi-21-2\",\"taxonomy\":\"shopify\"}],\"tags\":[\"Shopify Collective\",\"UrbansEdgeTattoo\"],\"gift_card\":false,\"collections\":[{\"id\":\"gid://shopify/Collection/296572878923\",\"handle\":\"recently-added\",\"title\":\"Recently Added\",\"description\":{\"html\":\"Fresh tattoo designs added to the catalog — check back often for new drops.\"}},{\"id\":\"gid://shopify/Collection/299755241547\",\"handle\":\"urban-connection\",\"title\":\"Urban Connection\",\"description\":{\"html\":\"\"}}]},{\"id\":\"gid://shopify/Product/7622254166091\",\"title\":\"Tattoo Soothing Gel\",\"description\":{\"html\":\"Soothe and protect your fresh tattoo with TBNC Tattoo Soothing Gel, a lightweight, fast-absorbing formula designed to relieve discomfort, reduce redness, and accelerate healing. Infused with powerful natural ingredients, this gel creates a protective barrier over your tattoo while deeply hydrating and nourishing the skin. Key Benefits: ✅Instant Cooling Relief – Aloe vera and chamomile extract calm irritation and soothe itching.✅Faster Healing – Enriched with vitamins and antioxidants to promote skin regeneration.✅Non-Greasy, Lightweight Formula – Absorbs quickly, leaving no sticky residue.✅Prevents Scabbing \\u0026 Cracking – Keeps skin hydrated to reduce peeling and dryness.✅Enhances Tattoo Vibrancy – Helps preserve ink clarity and color intensity.✅Fragrance-Free \\u0026 Hypoallergenic – Safe for all skin types, including sensitive skin. How to Use: Clean your tattoo with TBNC Foaming Soap and pat dry. Apply a thin layer of TBNC Tattoo Soothing Gel over the area. Let it absorb naturally—no need to rub in excessively. Use 2-3 times daily or as needed to keep your tattoo moisturized and protected. Why Choose TBNC Tattoo Soothing Gel? Unlike regular lotions, our gel is formulated specifically for tattoo aftercare. The cooling sensation provides immediate relief from itching and irritation, while its hydrating properties prevent excessive dryness and peeling. With no harsh chemicals or artificial fragrances, it’s a must-have for anyone looking to heal their tattoo quickly and comfortably. Keep your ink looking bold and your skin feeling great with TBNC Tattoo Soothing Gel – because your art deserves the best care!\"},\"url\":\"https://tattty.com/products/tattoo-soothing-gel\",\"handle\":\"tattoo-soothing-gel\",\"price_range\":{\"min\":{\"amount\":1944,\"currency\":\"USD\"},\"max\":{\"amount\":1944,\"currency\":\"USD\"}},\"list_price_range\":{\"min\":{\"amount\":0,\"currency\":\"USD\"},\"max\":{\"amount\":0,\"currency\":\"USD\"}},\"variants\":[{\"id\":\"gid://shopify/ProductVariant/42212221616203\",\"sku\":\"791126067182\",\"title\":\"Default Title\",\"description\":{\"html\":\"Soothe and protect your fresh tattoo with TBNC Tattoo Soothing Gel, a lightweight, fast-absorbing formula designed to relieve discomfort, reduce redness, and accelerate healing. Infused with powerful natural ingredients, this gel creates a protective barrier over your tattoo while deeply hydrating and nourishing the skin. Key Benefits: ✅Instant Cooling Relief – Aloe vera and chamomile extract calm irritation and soothe itching.✅Faster Healing – Enriched with vitamins and antioxidants to promote skin regeneration.✅Non-Greasy, Lightweight Formula – Absorbs quickly, leaving no sticky residue.✅Prevents Scabbing \\u0026 Cracking – Keeps skin hydrated to reduce peeling and dryness.✅Enhances Tattoo Vibrancy – Helps preserve ink clarity and color intensity.✅Fragrance-Free \\u0026 Hypoallergenic – Safe for all skin types, including sensitive skin. How to Use: Clean your tattoo with TBNC Foaming Soap and pat dry. Apply a thin layer of TBNC Tattoo Soothing Gel over the area. Let it absorb naturally—no need to rub in excessively. Use 2-3 times daily or as needed to keep your tattoo moisturized and protected. Why Choose TBNC Tattoo Soothing Gel? Unlike regular lotions, our gel is formulated specifically for tattoo aftercare. The cooling sensation provides immediate relief from itching and irritation, while its hydrating properties prevent excessive dryness and peeling. With no harsh chemicals or artificial fragrances, it’s a must-have for anyone looking to heal their tattoo quickly and comfortably. Keep your ink looking bold and your skin feeling great with TBNC Tattoo Soothing Gel – because your art deserves the best care!\"},\"price\":{\"amount\":1944,\"currency\":\"USD\"},\"availability\":{\"available\":true},\"options\":[{\"name\":\"Title\",\"label\":\"Default Title\"}],\"media\":[{\"type\":\"image\",\"url\":\"https://cdn.shopify.com/s/files/1/0649/4155/5787/files/TBNC_Tattoo_Soothing_Gel_Aftercare_fd3c4af6-e330-4399-9f5c-4e575dc4670f.jpg?v=1790857493\"}],\"requires\":{\"shipping\":true},\"checkout_url\":\"https://nba0ey-th.myshopify.com/cart/42212221616203:1\"}],\"options\":[{\"name\":\"Title\",\"values\":[{\"label\":\"Default Title\"}]}],\"media\":[{\"type\":\"image\",\"url\":\"https://cdn.shopify.com/s/files/1/0649/4155/5787/files/TBNC_Tattoo_Soothing_Gel_Aftercare_fd3c4af6-e330-4399-9f5c-4e575dc4670f.jpg?v=1790857493\"}],\"categories\":[{\"value\":\"gid://shopify/TaxonomyCategory/hb-3-2-9-10\",\"taxonomy\":\"shopify\"}],\"tags\":[\"Shopify Collective\",\"The Best Numbing Cream\"],\"gift_card\":false,\"collections\":[{\"id\":\"gid://shopify/Collection/292815372363\",\"handle\":\"shop\",\"title\":\"Tattoo Numbing Creams\",\"description\":{\"html\":\"Effortless Tattoo Care and Numbing Solutions for Your Artwork Welcome to our curated collection of tattoo care and numbing solutions, designed to enhance your experience from your first ink to its final touch. Our products are here to make the aftercare process seamless, so you can focus on showcasing your beautiful tattoos without any discomfort.\"}},{\"id\":\"gid://shopify/Collection/296572878923\",\"handle\":\"recently-added\",\"title\":\"Recently Added\",\"description\":{\"html\":\"Fresh tattoo designs added to the catalog — check back often for new drops.\"}}]}],\"pagination\":{\"has_next_page\":true,\"cursor\":\"eyJncmFwaHFsX2N1cnNvciI6ImV5SndZV2RsSWpveUxDSnNZWE4wWDJsa0lqbzNOakl5TWpVME1UWTJNRGt4TENKeVpYWmxjbk5sSWpwMGNuVmxMQ0p2Wm1aelpYUWlPamw5IiwicGFnZSI6Mn0=\"},\"messages\":[]}"
+      }
+    ],
+    "isError": false,
+    "structuredContent": {
+      "ucp": {
+        "version": "2026-04-08",
+        "status": "success",
+        "services": {
+          "dev.ucp.shopping": []
+        },
+        "capabilities": {
+          "dev.ucp.shopping.catalog.search": [
+            {
+              "version": "2026-04-08",
+              "spec": "https://ucp.dev/2026-04-08/specification/catalog",
+              "schema": "https://ucp.dev/2026-04-08/schemas/shopping/catalog_search.json"
+            }
+          ],
+          "dev.ucp.shopping.catalog.lookup": [
+            {
+              "version": "2026-04-08",
+              "spec": "https://ucp.dev/2026-04-08/specification/catalog",
+              "schema": "https://ucp.dev/2026-04-08/schemas/shopping/catalog_lookup.json"
+            }
+          ],
+          "dev.ucp.shopping.cart": [
+            {
+              "version": "2026-04-08",
+              "spec": "https://ucp.dev/2026-04-08/specification/cart",
+              "schema": "https://ucp.dev/2026-04-08/schemas/shopping/cart.json"
+            }
+          ],
+          "dev.ucp.shopping.checkout": [
+            {
+              "version": "2026-04-08",
+              "spec": "https://ucp.dev/2026-04-08/specification/checkout",
+              "schema": "https://ucp.dev/2026-04-08/schemas/shopping/checkout.json"
+            }
+          ],
+          "dev.ucp.shopping.order": [
+            {
+              "version": "2026-04-08",
+              "spec": "https://ucp.dev/2026-04-08/specification/order/",
+              "schema": "https://ucp.dev/2026-04-08/schemas/shopping/order.json"
+            }
+          ],
+          "dev.ucp.shopping.fulfillment": [
+            {
+              "version": "2026-04-08",
+              "spec": "https://ucp.dev/2026-04-08/specification/fulfillment",
+              "schema": "https://ucp.dev/2026-04-08/schemas/shopping/fulfillment.json",
+              "extends": [
+                "dev.ucp.shopping.checkout",
+                "dev.ucp.shopping.cart"
+              ],
+              "requires": {
+                "protocol": {
+                  "min": "2026-04-08"
+                }
+              },
+              "config": {
+                "allows_multi_destination": {
+                  "shipping": false
+                },
+                "allows_method_combinations": [
+                  [
+                    "shipping"
+                  ]
+                ]
+              }
+            }
+          ],
+          "dev.ucp.shopping.discount": [
+            {
+              "version": "2026-04-08",
+              "spec": "https://ucp.dev/2026-04-08/specification/discount",
+              "schema": "https://ucp.dev/2026-04-08/schemas/shopping/discount.json",
+              "extends": [
+                "dev.ucp.shopping.checkout",
+                "dev.ucp.shopping.cart"
+              ],
+              "requires": {
+                "protocol": {
+                  "min": "2026-04-08"
+                }
+              }
+            }
+          ],
+          "dev.shopify.catalog": [
+            {
+              "version": "2026-04-08",
+              "spec": "https://shopify.dev/docs/agents/catalog/storefront-catalog",
+              "schema": "https://shopify.dev/ucp/schemas/2026-04-08/shopify_catalog.json",
+              "extends": [
+                "dev.ucp.shopping.catalog.search",
+                "dev.ucp.shopping.catalog.lookup"
+              ],
+              "requires": {
+                "protocol": {
+                  "min": "2026-04-08"
+                }
+              }
+            }
+          ],
+          "dev.ucp.common.identity_linking": [
+            {
+              "version": "2026-04-08",
+              "spec": "https://ucp.dev/2026-04-08/specification/identity-linking/",
+              "schema": "https://ucp.dev/2026-04-08/schemas/common/identity_linking.json",
+              "config": {
+                "providers": {
+                  "app.shop.accounts": [
+                    {
+                      "type": "oauth2",
+                      "auth_url": "https://accounts.shop.app"
+                    }
+                  ]
+                },
+                "scopes": {}
+              }
+            }
+          ]
+        },
+        "payment_handlers": {
+          "com.google.pay": [
+            {
+              "id": "gpay",
+              "version": "2026-01-11",
+              "spec": "https://pay.google.com/gp/p/ucp/2026-01-11/",
+              "schema": "https://pay.google.com/gp/p/ucp/2026-01-11/schemas/config.json",
+              "config": {
+                "api_version": 2,
+                "api_version_minor": 0,
+                "merchant_info": {
+                  "merchant_name": "TaTTTy",
+                  "merchant_id": "16708973830884969730",
+                  "merchant_origin": "tattty.com",
+                  "auth_jwt": ""
+                },
+                "allowed_payment_methods": [
+                  {
+                    "type": "CARD",
+                    "parameters": {
+                      "allowed_auth_methods": [
+                        "PAN_ONLY",
+                        "CRYPTOGRAM_3DS"
+                      ],
+                      "allowed_card_networks": [
+                        "VISA",
+                        "MASTERCARD",
+                        "AMEX",
+                        "DISCOVER"
+                      ],
+                      "billing_address_required": true,
+                      "billing_address_parameters": {
+                        "format": "FULL",
+                        "phone_number_required": false
+                      }
+                    },
+                    "tokenization_specification": {
+                      "type": "PAYMENT_GATEWAY",
+                      "parameters": {
+                        "gateway": "shopify",
+                        "gatewayMerchantId": "64941555787"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "dev.shopify.card": [
+            {
+              "id": "shopify.card",
+              "version": "2026-01-15",
+              "spec": "https://ucp.dev/specification/payment-handler-guide",
+              "schema": "https://shopify.dev/ucp/card-payment-handler/2026-01-15/config.json",
+              "config": {
+                "payment_methods": [
+                  {
+                    "type": "card",
+                    "enabled_card_brands": [
+                      "visa",
+                      "master",
+                      "american_express",
+                      "discover",
+                      "diners_club"
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "dev.shopify.shop_pay": [
+            {
+              "id": "shop_pay",
+              "version": "2026-04-08",
+              "spec": "https://shopify.dev/ucp/shop-pay-handler/2026-04-08/spec.md",
+              "schema": "https://shopify.dev/ucp/shop-pay-handler/2026-04-08/schema.json",
+              "config": {
+                "shop_id": "64941555787"
+              }
+            }
+          ]
+        }
+      },
+      "products": [
+        {
+          "id": "gid://shopify/Product/7622254100555",
+          "title": "Tattoo Numbing Cream - .35 oz",
+          "description": {
+            "html": "TBNC Tattoo Numbing Cream – Pain-Free Tattooing Starts Here Experience next-level comfort during your tattoo sessions with TBNC Tattoo Numbing Cream, trusted in over 3,200 tattoo studios nationwide and over 1 million tubes sold. Designed for both professional tattoo artists and tattoo enthusiasts, our premium numbing cream ensures a smoother, pain-reduced tattooing experience every time. Why TBNC is the #1 Choice for Tattoo Professionals and Enthusiasts Fast-Acting & Long-Lasting: Our formula penetrates quickly to numb the skin effectively, keeping you comfortable throughout your 4-6 hour session. Max Lidocaine Formula: Provides powerful, fast-acting numbing to minimize pain during tattoo sessions. Tattoo Artist Approved: Preferred by professionals for clean application and no interference with tattoo ink. FDA Compliant & Safe: Made with high-quality, clinically tested ingredients, ensuring safety and effectiveness for all skin types. Veteran Owned & Operated: Proudly crafted by a veteran-led company in sunny Florida, combining precision, quality, and dedication. Trusted Nationwide: With over 3,200 tattoo studios stocking TBNC, it’s the go-to numbing solution across the U.S. How to Use TBNC Tattoo Numbing Cream Clean and dry the area to be tattooed. Apply a thick layer of TBNC Cream on the skin. Cover with plastic wrap for enhanced absorption. Wait 1 hour for maximum effect. Enjoy a comfortable, pain-free tattooing session. Find Detailed Instructions On Applying Tattoo Numbing Cream Who Needs TBNC Tattoo Numbing Cream? Whether you’re getting your first tattoo, working on a large sleeve, or a professional tattoo artist looking to offer your clients the best experience, TBNC is the ultimate solution for pain-free sessions. Why Choose TBNC Over Other Numbing Creams Proven results in thousands of professional tattoo studios. Professional-grade Max Lidocaine formula for superior numbing. Veteran-owned commitment to quality and customer satisfaction. Florida-based manufacturing ensures consistent, premium quality. Registered with the FDA NDC Code: 87562-001-01 Bring Comfort to Every Session Don’t let pain hold you back from your next masterpiece. With TBNC Tattoo Numbing Cream, you can focus on the art, not the discomfort. Order Now and join thousands of satisfied customers and tattoo artists who trust TBNC! Also try our Numbing Gel or Numbing Spray to get numb mid-session If you are getting a large tattoo be sure to check out our Tattoo Numbing Cream XL which is 3x larger"
+          },
+          "url": "https://tattty.com/products/tattoo-numbing-cream",
+          "handle": "tattoo-numbing-cream",
+          "price_range": {
+            "min": {
+              "amount": 2074,
+              "currency": "USD"
+            },
+            "max": {
+              "amount": 2074,
+              "currency": "USD"
+            }
+          },
+          "list_price_range": {
+            "min": {
+              "amount": 0,
+              "currency": "USD"
+            },
+            "max": {
+              "amount": 0,
+              "currency": "USD"
+            }
+          },
+          "variants": [
+            {
+              "id": "gid://shopify/ProductVariant/42212221681739",
+              "sku": "791126458713",
+              "title": "Default Title",
+              "description": {
+                "html": "TBNC Tattoo Numbing Cream – Pain-Free Tattooing Starts Here Experience next-level comfort during your tattoo sessions with TBNC Tattoo Numbing Cream, trusted in over 3,200 tattoo studios nationwide and over 1 million tubes sold. Designed for both professional tattoo artists and tattoo enthusiasts, our premium numbing cream ensures a smoother, pain-reduced tattooing experience every time. Why TBNC is the #1 Choice for Tattoo Professionals and Enthusiasts Fast-Acting & Long-Lasting: Our formula penetrates quickly to numb the skin effectively, keeping you comfortable throughout your 4-6 hour session. Max Lidocaine Formula: Provides powerful, fast-acting numbing to minimize pain during tattoo sessions. Tattoo Artist Approved: Preferred by professionals for clean application and no interference with tattoo ink. FDA Compliant & Safe: Made with high-quality, clinically tested ingredients, ensuring safety and effectiveness for all skin types. Veteran Owned & Operated: Proudly crafted by a veteran-led company in sunny Florida, combining precision, quality, and dedication. Trusted Nationwide: With over 3,200 tattoo studios stocking TBNC, it’s the go-to numbing solution across the U.S. How to Use TBNC Tattoo Numbing Cream Clean and dry the area to be tattooed. Apply a thick layer of TBNC Cream on the skin. Cover with plastic wrap for enhanced absorption. Wait 1 hour for maximum effect. Enjoy a comfortable, pain-free tattooing session. Find Detailed Instructions On Applying Tattoo Numbing Cream Who Needs TBNC Tattoo Numbing Cream? Whether you’re getting your first tattoo, working on a large sleeve, or a professional tattoo artist looking to offer your clients the best experience, TBNC is the ultimate solution for pain-free sessions. Why Choose TBNC Over Other Numbing Creams Proven results in thousands of professional tattoo studios. Professional-grade Max Lidocaine formula for superior numbing. Veteran-owned commitment to quality and customer satisfaction. Florida-based manufacturing ensures consistent, premium quality. Registered with the FDA NDC Code: 87562-001-01 Bring Comfort to Every Session Don’t let pain hold you back from your next masterpiece. With TBNC Tattoo Numbing Cream, you can focus on the art, not the discomfort. Order Now and join thousands of satisfied customers and tattoo artists who trust TBNC! Also try our Numbing Gel or Numbing Spray to get numb mid-session If you are getting a large tattoo be sure to check out our Tattoo Numbing Cream XL which is 3x larger"
+              },
+              "price": {
+                "amount": 2074,
+                "currency": "USD"
+              },
+              "availability": {
+                "available": true
+              },
+              "options": [
+                {
+                  "name": "Title",
+                  "label": "Default Title"
+                }
+              ],
+              "media": [
+                {
+                  "type": "image",
+                  "url": "https://cdn.shopify.com/s/files/1/0649/4155/5787/files/TBNC_Tattoo_Numbing_Cream_8_1269806b-821f-4069-a795-b676ea18337e.jpg?v=1782788454"
+                }
+              ],
+              "requires": {
+                "shipping": true
+              },
+              "checkout_url": "https://nba0ey-th.myshopify.com/cart/42212221681739:1"
+            }
+          ],
+          "options": [
+            {
+              "name": "Title",
+              "values": [
+                {
+                  "label": "Default Title"
+                }
+              ]
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "url": "https://cdn.shopify.com/s/files/1/0649/4155/5787/files/TBNC_Tattoo_Numbing_Cream_8_1269806b-821f-4069-a795-b676ea18337e.jpg?v=1782788454",
+              "alt_text": "Tattoo Numbing Cream - TaTTTy"
+            }
+          ],
+          "categories": [
+            {
+              "value": "gid://shopify/TaxonomyCategory/hb-1-8",
+              "taxonomy": "shopify"
+            }
+          ],
+          "tags": [
+            "Shopify Collective",
+            "The Best Numbing Cream"
+          ],
+          "gift_card": false,
+          "collections": [
+            {
+              "id": "gid://shopify/Collection/292815372363",
+              "handle": "shop",
+              "title": "Tattoo Numbing Creams",
+              "description": {
+                "html": "Effortless Tattoo Care and Numbing Solutions for Your Artwork Welcome to our curated collection of tattoo care and numbing solutions, designed to enhance your experience from your first ink to its final touch. Our products are here to make the aftercare process seamless, so you can focus on showcasing your beautiful tattoos without any discomfort."
+              }
+            },
+            {
+              "id": "gid://shopify/Collection/296572878923",
+              "handle": "recently-added",
+              "title": "Recently Added",
+              "description": {
+                "html": "Fresh tattoo designs added to the catalog — check back often for new drops."
+              }
+            }
+          ]
+        },
+        {
+          "id": "gid://shopify/Product/7622254035019",
+          "title": "Tattoo Numbing Cream - 1 oz",
+          "description": {
+            "html": "TBNC Tattoo Numbing Cream XL – 3X Size, 3X Power Experience tattoo comfort like never before with the TBNC Tattoo Numbing Cream XL – our largest and most powerful formula yet. Packed with maximum-strength lidocaine and a unique blend of soothing botanicals, this XL (1oz) version delivers triple the size and potency of our original cream, giving you longer-lasting comfort for big, detailed, or multiple tattoo sessions. Trusted Nationwide in Over 3,200 Tattoo Studios TBNC has earned its reputation as a tattoo artist–approved, customer-loved numbing cream. We’re proud to be stocked in over 3,200 professional tattoo studios across the United States, with artists recommending it daily for its reliability, speed, and effectiveness. Why Choose TBNC Tattoo Numbing Cream XL? 3X the Size – Perfect for large or multiple tattoos in one session. Max Lidocaine – Deep, lasting numbing for up to 4-6 hours. Skin-Safe & FDA Approved – Gentle on skin without affecting ink or healing. Fast-Acting Formula – Starts working in as little as 20 minutes. Veteran Owned & Operated – Built on discipline, integrity, and dedication. Proudly Located In Florida – with worldwide shipping. Perfect For: Full sleeve tattoos Back pieces and large coverage areas Long, multiple-hour tattoo sessions Clients with low pain tolerance How to Use TBNC Tattoo Numbing Cream XL Clean and dry the area to be tattooed. Apply a thick layer of TBNC Tattoo Numbing Cream XL. Cover with plastic wrap to lock in the numbing effect. Let it sit for 45–60 minutes before your tattoo session. Remove wrap, wipe excess cream, and enjoy a more comfortable tattoo experience. Find Detailed Instructions On Applying Tattoo Numbing Cream Our Numbing Cream Is Listed With The FDA Registered with the FDA NDC Code: 87562-001-01 Why Artists & Clients Love TBNC Our formula doesn’t cause skin swelling, won’t affect ink application, and maintains skin texture – making it a favorite among professional tattoo artists. With its proven performance, it’s no wonder TBNC is the go-to numbing cream for both clients and pros nationwide. Order Your XL Supply Today Don’t settle for short-lasting numbing or small tubes that run out mid-session. Upgrade to the TBNC Tattoo Numbing Cream XL and enjoy maximum comfort for your biggest and boldest tattoos. TBNC – Proudly Veteran Owned, Florida Based, Tattoo Artist Approved."
+          },
+          "url": "https://tattty.com/products/tattoo-numbing-cream-xl",
+          "handle": "tattoo-numbing-cream-xl",
+          "price_range": {
+            "min": {
+              "amount": 2984,
+              "currency": "USD"
+            },
+            "max": {
+              "amount": 2984,
+              "currency": "USD"
+            }
+          },
+          "list_price_range": {
+            "min": {
+              "amount": 3894,
+              "currency": "USD"
+            },
+            "max": {
+              "amount": 3894,
+              "currency": "USD"
+            }
+          },
+          "variants": [
+            {
+              "id": "gid://shopify/ProductVariant/42212221583435",
+              "sku": "602581867623",
+              "title": "Default Title",
+              "description": {
+                "html": "TBNC Tattoo Numbing Cream XL – 3X Size, 3X Power Experience tattoo comfort like never before with the TBNC Tattoo Numbing Cream XL – our largest and most powerful formula yet. Packed with maximum-strength lidocaine and a unique blend of soothing botanicals, this XL (1oz) version delivers triple the size and potency of our original cream, giving you longer-lasting comfort for big, detailed, or multiple tattoo sessions. Trusted Nationwide in Over 3,200 Tattoo Studios TBNC has earned its reputation as a tattoo artist–approved, customer-loved numbing cream. We’re proud to be stocked in over 3,200 professional tattoo studios across the United States, with artists recommending it daily for its reliability, speed, and effectiveness. Why Choose TBNC Tattoo Numbing Cream XL? 3X the Size – Perfect for large or multiple tattoos in one session. Max Lidocaine – Deep, lasting numbing for up to 4-6 hours. Skin-Safe & FDA Approved – Gentle on skin without affecting ink or healing. Fast-Acting Formula – Starts working in as little as 20 minutes. Veteran Owned & Operated – Built on discipline, integrity, and dedication. Proudly Located In Florida – with worldwide shipping. Perfect For: Full sleeve tattoos Back pieces and large coverage areas Long, multiple-hour tattoo sessions Clients with low pain tolerance How to Use TBNC Tattoo Numbing Cream XL Clean and dry the area to be tattooed. Apply a thick layer of TBNC Tattoo Numbing Cream XL. Cover with plastic wrap to lock in the numbing effect. Let it sit for 45–60 minutes before your tattoo session. Remove wrap, wipe excess cream, and enjoy a more comfortable tattoo experience. Find Detailed Instructions On Applying Tattoo Numbing Cream Our Numbing Cream Is Listed With The FDA Registered with the FDA NDC Code: 87562-001-01 Why Artists & Clients Love TBNC Our formula doesn’t cause skin swelling, won’t affect ink application, and maintains skin texture – making it a favorite among professional tattoo artists. With its proven performance, it’s no wonder TBNC is the go-to numbing cream for both clients and pros nationwide. Order Your XL Supply Today Don’t settle for short-lasting numbing or small tubes that run out mid-session. Upgrade to the TBNC Tattoo Numbing Cream XL and enjoy maximum comfort for your biggest and boldest tattoos. TBNC – Proudly Veteran Owned, Florida Based, Tattoo Artist Approved."
+              },
+              "price": {
+                "amount": 2984,
+                "currency": "USD"
+              },
+              "list_price": {
+                "amount": 3894,
+                "currency": "USD"
+              },
+              "availability": {
+                "available": true
+              },
+              "options": [
+                {
+                  "name": "Title",
+                  "label": "Default Title"
+                }
+              ],
+              "media": [
+                {
+                  "type": "image",
+                  "url": "https://cdn.shopify.com/s/files/1/0649/4155/5787/files/TBNC_Numbing_Cream_XL_4_1a1471aa-a255-4574-8b91-f883e7e083f1.jpg?v=1782788453"
+                }
+              ],
+              "requires": {
+                "shipping": true
+              },
+              "checkout_url": "https://nba0ey-th.myshopify.com/cart/42212221583435:1"
+            }
+          ],
+          "options": [
+            {
+              "name": "Title",
+              "values": [
+                {
+                  "label": "Default Title"
+                }
+              ]
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "url": "https://cdn.shopify.com/s/files/1/0649/4155/5787/files/TBNC_Numbing_Cream_XL_4_1a1471aa-a255-4574-8b91-f883e7e083f1.jpg?v=1782788453",
+              "alt_text": "Tattoo Numbing Cream XL - TaTTTy"
+            }
+          ],
+          "categories": [
+            {
+              "value": "gid://shopify/TaxonomyCategory/hb-1-8",
+              "taxonomy": "shopify"
+            }
+          ],
+          "tags": [
+            "Shopify Collective",
+            "The Best Numbing Cream"
+          ],
+          "gift_card": false,
+          "collections": [
+            {
+              "id": "gid://shopify/Collection/292815372363",
+              "handle": "shop",
+              "title": "Tattoo Numbing Creams",
+              "description": {
+                "html": "Effortless Tattoo Care and Numbing Solutions for Your Artwork Welcome to our curated collection of tattoo care and numbing solutions, designed to enhance your experience from your first ink to its final touch. Our products are here to make the aftercare process seamless, so you can focus on showcasing your beautiful tattoos without any discomfort."
+              }
+            },
+            {
+              "id": "gid://shopify/Collection/296572878923",
+              "handle": "recently-added",
+              "title": "Recently Added",
+              "description": {
+                "html": "Fresh tattoo designs added to the catalog — check back often for new drops."
+              }
+            }
+          ]
+        },
+        {
+          "id": "gid://shopify/Product/7904088686667",
+          "title": "Tattoo Numbing Cream - 2 oz",
+          "description": {
+            "html": "TBNC Tattoo Numbing Cream MAX 2oz – Extra Strength, Extra Size, Maximum Comfort Take your tattoo experience to the next level with TBNC Tattoo Numbing Cream MAX 2oz — our most powerful and long-lasting formula designed for serious sessions. At 6x larger than the standard TBNC tube, this MAX size is built for extended tattoos, large-scale pieces, and clients who demand consistent comfort from start to finish. 🔥 Why Choose TBNC MAX 2oz? ✔ 6X Bigger SizeNo more running out mid-session. This 2oz tub gives you significantly more coverage compared to the standard TBNC numbing cream, making it ideal for sleeves, back pieces, and multi-hour work. ✔ Maximum Strength FormulaEngineered for deep numbing power, TBNC MAX helps reduce pain, irritation, and discomfort so you can stay relaxed and focused throughout your tattoo session. ✔ Long-Lasting Numbing EffectExperience hours of relief with a fast-acting lidocaine formula that penetrates quickly and keeps working — perfect for both beginners and seasoned tattoo collectors. ✔ Smooth, Non-Greasy ApplicationApplies easily and absorbs efficiently into the skin without leaving a heavy residue, making it artist-friendly and easy to work with. ✔ Professional Grade QualityTrusted by tattoo artists and clients alike, TBNC delivers consistent results you can rely on every time. 💉 Perfect For: Large tattoos & long sessions Sensitive areas First-time clients Cover-ups and detailed work 🧴 How to Use: Clean and dry the area thoroughly Apply a thick layer of TBNC MAX cream Cover with plastic wrap for best absorption Wait 60 minutes before your session Wipe off and begin tattooing ASAP You can find detailed instructions HERE ⚡ Upgrade Your Tattoo Experience Don’t settle for small tubes that fall short. TBNC Tattoo Numbing Cream MAX 2oz delivers more product, more power, and more comfort — exactly what you need for your biggest tattoo projects. 🛒 Key Features: Size: 2oz (6x larger than our standard tube and 2x larger than our XL tube) Fast-acting & long-lasting Extra strength numbing formula Ideal for large tattoos and extended sessions Registered with the FDA NDC Code: 87562-001-01 Get through your tattoo session with confidence and comfort using TBNC MAX — when standard just isn’t enough."
+          },
+          "url": "https://tattty.com/products/tattoo-numbing-cream-max",
+          "handle": "tattoo-numbing-cream-max",
+          "price_range": {
+            "min": {
+              "amount": 3894,
+              "currency": "USD"
+            },
+            "max": {
+              "amount": 3894,
+              "currency": "USD"
+            }
+          },
+          "list_price_range": {
+            "min": {
+              "amount": 4544,
+              "currency": "USD"
+            },
+            "max": {
+              "amount": 4544,
+              "currency": "USD"
+            }
+          },
+          "variants": [
+            {
+              "id": "gid://shopify/ProductVariant/42723862872139",
+              "sku": "602581867739",
+              "title": "Default Title",
+              "description": {
+                "html": "TBNC Tattoo Numbing Cream MAX 2oz – Extra Strength, Extra Size, Maximum Comfort Take your tattoo experience to the next level with TBNC Tattoo Numbing Cream MAX 2oz — our most powerful and long-lasting formula designed for serious sessions. At 6x larger than the standard TBNC tube, this MAX size is built for extended tattoos, large-scale pieces, and clients who demand consistent comfort from start to finish. 🔥 Why Choose TBNC MAX 2oz? ✔ 6X Bigger SizeNo more running out mid-session. This 2oz tub gives you significantly more coverage compared to the standard TBNC numbing cream, making it ideal for sleeves, back pieces, and multi-hour work. ✔ Maximum Strength FormulaEngineered for deep numbing power, TBNC MAX helps reduce pain, irritation, and discomfort so you can stay relaxed and focused throughout your tattoo session. ✔ Long-Lasting Numbing EffectExperience hours of relief with a fast-acting lidocaine formula that penetrates quickly and keeps working — perfect for both beginners and seasoned tattoo collectors. ✔ Smooth, Non-Greasy ApplicationApplies easily and absorbs efficiently into the skin without leaving a heavy residue, making it artist-friendly and easy to work with. ✔ Professional Grade QualityTrusted by tattoo artists and clients alike, TBNC delivers consistent results you can rely on every time. 💉 Perfect For: Large tattoos & long sessions Sensitive areas First-time clients Cover-ups and detailed work 🧴 How to Use: Clean and dry the area thoroughly Apply a thick layer of TBNC MAX cream Cover with plastic wrap for best absorption Wait 60 minutes before your session Wipe off and begin tattooing ASAP You can find detailed instructions HERE ⚡ Upgrade Your Tattoo Experience Don’t settle for small tubes that fall short. TBNC Tattoo Numbing Cream MAX 2oz delivers more product, more power, and more comfort — exactly what you need for your biggest tattoo projects. 🛒 Key Features: Size: 2oz (6x larger than our standard tube and 2x larger than our XL tube) Fast-acting & long-lasting Extra strength numbing formula Ideal for large tattoos and extended sessions Registered with the FDA NDC Code: 87562-001-01 Get through your tattoo session with confidence and comfort using TBNC MAX — when standard just isn’t enough."
+              },
+              "price": {
+                "amount": 3894,
+                "currency": "USD"
+              },
+              "list_price": {
+                "amount": 4544,
+                "currency": "USD"
+              },
+              "availability": {
+                "available": true
+              },
+              "options": [
+                {
+                  "name": "Title",
+                  "label": "Default Title"
+                }
+              ],
+              "media": [
+                {
+                  "type": "image",
+                  "url": "https://cdn.shopify.com/s/files/1/0649/4155/5787/files/TBNC_Tattoo_Numbing_Cream_1.jpg?v=1782504458"
+                }
+              ],
+              "requires": {
+                "shipping": true
+              },
+              "checkout_url": "https://nba0ey-th.myshopify.com/cart/42723862872139:1"
+            }
+          ],
+          "options": [
+            {
+              "name": "Title",
+              "values": [
+                {
+                  "label": "Default Title"
+                }
+              ]
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "url": "https://cdn.shopify.com/s/files/1/0649/4155/5787/files/TBNC_Tattoo_Numbing_Cream_1.jpg?v=1782504458",
+              "alt_text": "Tattoo Numbing Cream MAX - TaTTTy"
+            }
+          ],
+          "categories": [
+            {
+              "value": "gid://shopify/TaxonomyCategory/hb-1-8",
+              "taxonomy": "shopify"
+            }
+          ],
+          "tags": [
+            "Shopify Collective",
+            "The Best Numbing Cream"
+          ],
+          "gift_card": false,
+          "collections": [
+            {
+              "id": "gid://shopify/Collection/296572878923",
+              "handle": "recently-added",
+              "title": "Recently Added",
+              "description": {
+                "html": "Fresh tattoo designs added to the catalog — check back often for new drops."
+              }
+            }
+          ]
+        },
+        {
+          "id": "gid://shopify/Product/7904088653899",
+          "title": "Tattoo Numbing Cream XL - 2 Pack",
+          "description": {
+            "html": "TBNC Tattoo Numbing Cream XL — 2 Pack Extra strength. Extra size. Double the comfort. The TBNC Tattoo Numbing Cream XL 2 Pack gives artists and clients more of the powerful, long-lasting topical numbing they need for larger pieces or multi-session work — two full-size tubes, ready when you are. Why customers choose TBNC XL Extra-large tubes: More product per tube for extended sessions and larger coverage. Fast-acting relief: Formulated to reduce surface pain and sensitivity so artists can work with fewer interruptions. Easy to apply: Smooth, non-greasy texture spreads evenly and wipes off cleanly when desired. Value pack: Two XL tubes — perfect for busy studios, long sessions, or for keeping one at the shop and one at home. Product details Contains: 2 × TBNC Tattoo Numbing Cream XL (full-size tubes) Form: Topical numbing cream Use: Pre- and mid-session topical numbing for tattoo procedures Storage: Store in a cool, dry place away from direct sunlight How to use Clean and dry the treatment area thoroughly. Apply a thick, even layer of TBNC cream to the skin. Wrap in saran wrap and leave on for 1 hour. Wipe away excess before beginning work. Safety & warnings For external use only. Avoid contact with eyes, open wounds, and mucous membranes. Keep out of reach of children. If pregnant, nursing, or under a physician’s care, consult a healthcare professional before use. Discontinue use and seek medical attention if irritation, rash, or severe reactions occur. Frequently asked — quick answers Is the 2 pack good for long sessions? Yes — two XL tubes give you extra coverage so you can comfortably handle larger pieces or multiple appointments. Will it affect tattoo ink? TBNC is formulated to be compatible with tattoo procedures when used as directed. Always follow your artist’s protocol. Ready for longer sessions? Grab the TBNC Tattoo Numbing Cream XL 2 Pack and give your clients (and yourself) the comfort boost you need — stock up and stay prepared."
+          },
+          "url": "https://tattty.com/products/tattoo-numbing-cream-xl-2-pack",
+          "handle": "tattoo-numbing-cream-xl-2-pack",
+          "price_range": {
+            "min": {
+              "amount": 5194,
+              "currency": "USD"
+            },
+            "max": {
+              "amount": 5194,
+              "currency": "USD"
+            }
+          },
+          "list_price_range": {
+            "min": {
+              "amount": 0,
+              "currency": "USD"
+            },
+            "max": {
+              "amount": 0,
+              "currency": "USD"
+            }
+          },
+          "variants": [
+            {
+              "id": "gid://shopify/ProductVariant/42723862839371",
+              "sku": "602581867661",
+              "title": "Default Title",
+              "description": {
+                "html": "TBNC Tattoo Numbing Cream XL — 2 Pack Extra strength. Extra size. Double the comfort. The TBNC Tattoo Numbing Cream XL 2 Pack gives artists and clients more of the powerful, long-lasting topical numbing they need for larger pieces or multi-session work — two full-size tubes, ready when you are. Why customers choose TBNC XL Extra-large tubes: More product per tube for extended sessions and larger coverage. Fast-acting relief: Formulated to reduce surface pain and sensitivity so artists can work with fewer interruptions. Easy to apply: Smooth, non-greasy texture spreads evenly and wipes off cleanly when desired. Value pack: Two XL tubes — perfect for busy studios, long sessions, or for keeping one at the shop and one at home. Product details Contains: 2 × TBNC Tattoo Numbing Cream XL (full-size tubes) Form: Topical numbing cream Use: Pre- and mid-session topical numbing for tattoo procedures Storage: Store in a cool, dry place away from direct sunlight How to use Clean and dry the treatment area thoroughly. Apply a thick, even layer of TBNC cream to the skin. Wrap in saran wrap and leave on for 1 hour. Wipe away excess before beginning work. Safety & warnings For external use only. Avoid contact with eyes, open wounds, and mucous membranes. Keep out of reach of children. If pregnant, nursing, or under a physician’s care, consult a healthcare professional before use. Discontinue use and seek medical attention if irritation, rash, or severe reactions occur. Frequently asked — quick answers Is the 2 pack good for long sessions? Yes — two XL tubes give you extra coverage so you can comfortably handle larger pieces or multiple appointments. Will it affect tattoo ink? TBNC is formulated to be compatible with tattoo procedures when used as directed. Always follow your artist’s protocol. Ready for longer sessions? Grab the TBNC Tattoo Numbing Cream XL 2 Pack and give your clients (and yourself) the comfort boost you need — stock up and stay prepared."
+              },
+              "price": {
+                "amount": 5194,
+                "currency": "USD"
+              },
+              "availability": {
+                "available": true
+              },
+              "options": [
+                {
+                  "name": "Title",
+                  "label": "Default Title"
+                }
+              ],
+              "media": [
+                {
+                  "type": "image",
+                  "url": "https://cdn.shopify.com/s/files/1/0649/4155/5787/files/Tattoo_Numbing_Cream_XL_-_2pack.jpg?v=1782504459"
+                }
+              ],
+              "requires": {
+                "shipping": true
+              },
+              "checkout_url": "https://nba0ey-th.myshopify.com/cart/42723862839371:1"
+            }
+          ],
+          "options": [
+            {
+              "name": "Title",
+              "values": [
+                {
+                  "label": "Default Title"
+                }
+              ]
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "url": "https://cdn.shopify.com/s/files/1/0649/4155/5787/files/Tattoo_Numbing_Cream_XL_-_2pack.jpg?v=1782504459",
+              "alt_text": "Tattoo Numbing Cream XL - 2 Pack - TaTTTy"
+            }
+          ],
+          "categories": [
+            {
+              "value": "gid://shopify/TaxonomyCategory/hb-1-8",
+              "taxonomy": "shopify"
+            }
+          ],
+          "tags": [
+            "Shopify Collective",
+            "The Best Numbing Cream"
+          ],
+          "gift_card": false,
+          "collections": [
+            {
+              "id": "gid://shopify/Collection/296572878923",
+              "handle": "recently-added",
+              "title": "Recently Added",
+              "description": {
+                "html": "Fresh tattoo designs added to the catalog — check back often for new drops."
+              }
+            }
+          ]
+        },
+        {
+          "id": "gid://shopify/Product/7622254002251",
+          "title": "Tattoo Numbing Gel - Mid Session",
+          "description": {
+            "html": "Mid Session TBNC Tattoo Numbing Gel – Instant Relief When You Need It Most Power through your tattoo session with confidence using Mid Session TBNC Tattoo Numbing Gel—the ultimate solution for fast, effective pain relief while you're already being tattooed. Designed specifically for mid-session use, this powerful numbing gel penetrates quickly and works fast to keep you comfortable without interrupting your artist’s flow. Whether you're tackling a large piece or just reaching your limit, TBNC’s mid-session formula delivers targeted relief right when you need it. No pre-session waiting, no numbing cream required—just apply it to open skin and feel the difference in minutes. ✅ Key Features: Mid-Session Application: Use during your tattoo, not before Fast-Acting Relief: Starts working within minutes Long-Lasting Comfort: Keeps the pain at bay for extended sessions Lidocaine-Powered Formula: Maximum strength for serious numbing Artist-Tested, Client-Approved: Won’t disrupt ink or healing Safe, Clean, and Effective: Crafted with tattoo professionals in mind 💡 Why Choose TBNC Mid Session Gel? Unlike traditional numbing creams, TBNC's mid-session gel is specifically designed to be applied after the skin is broken, allowing it to take effect instantly during long or painful sessions. It's perfect for touch-ups, color fill-ins, or those final painful hours when your skin starts getting sensitive. ❔ How To Use TBNC Numbing Gel? Place TBNC Numbing Gel on your tattoo mid session Wrap tattoo in saran wrap for 10-20 minutes Wipe off and continue tattoo session 🔒 Trusted by Tattoo Professionals TBNC is a name trusted by artists and clients alike. Whether you're a professional studio or a first-time client, this gel is a must-have in your tattoo care kit. Stay strong, sit longer, and get the tattoo you really want—with Mid Session TBNC Tattoo Numbing Gel. TBNC Tattoo Numbing Gel | Lidocaine Tattoo Numbing | Fast-Acting Tattoo Pain Relief Gel | Tattoo Numbing Gel | Long-Lasting Comfort for Tattoo Sessions | Tattoo-Artist Approved | Veteran-Owned Tattoo Brand in Florida."
+          },
+          "url": "https://tattty.com/products/tattoo-numbing-gel-mid-session",
+          "handle": "tattoo-numbing-gel-mid-session",
+          "price_range": {
+            "min": {
+              "amount": 2204,
+              "currency": "USD"
+            },
+            "max": {
+              "amount": 2204,
+              "currency": "USD"
+            }
+          },
+          "list_price_range": {
+            "min": {
+              "amount": 0,
+              "currency": "USD"
+            },
+            "max": {
+              "amount": 0,
+              "currency": "USD"
+            }
+          },
+          "variants": [
+            {
+              "id": "gid://shopify/ProductVariant/42212221419595",
+              "sku": "602581867630",
+              "title": "Default Title",
+              "description": {
+                "html": "Mid Session TBNC Tattoo Numbing Gel – Instant Relief When You Need It Most Power through your tattoo session with confidence using Mid Session TBNC Tattoo Numbing Gel—the ultimate solution for fast, effective pain relief while you're already being tattooed. Designed specifically for mid-session use, this powerful numbing gel penetrates quickly and works fast to keep you comfortable without interrupting your artist’s flow. Whether you're tackling a large piece or just reaching your limit, TBNC’s mid-session formula delivers targeted relief right when you need it. No pre-session waiting, no numbing cream required—just apply it to open skin and feel the difference in minutes. ✅ Key Features: Mid-Session Application: Use during your tattoo, not before Fast-Acting Relief: Starts working within minutes Long-Lasting Comfort: Keeps the pain at bay for extended sessions Lidocaine-Powered Formula: Maximum strength for serious numbing Artist-Tested, Client-Approved: Won’t disrupt ink or healing Safe, Clean, and Effective: Crafted with tattoo professionals in mind 💡 Why Choose TBNC Mid Session Gel? Unlike traditional numbing creams, TBNC's mid-session gel is specifically designed to be applied after the skin is broken, allowing it to take effect instantly during long or painful sessions. It's perfect for touch-ups, color fill-ins, or those final painful hours when your skin starts getting sensitive. ❔ How To Use TBNC Numbing Gel? Place TBNC Numbing Gel on your tattoo mid session Wrap tattoo in saran wrap for 10-20 minutes Wipe off and continue tattoo session 🔒 Trusted by Tattoo Professionals TBNC is a name trusted by artists and clients alike. Whether you're a professional studio or a first-time client, this gel is a must-have in your tattoo care kit. Stay strong, sit longer, and get the tattoo you really want—with Mid Session TBNC Tattoo Numbing Gel. TBNC Tattoo Numbing Gel | Lidocaine Tattoo Numbing | Fast-Acting Tattoo Pain Relief Gel | Tattoo Numbing Gel | Long-Lasting Comfort for Tattoo Sessions | Tattoo-Artist Approved | Veteran-Owned Tattoo Brand in Florida."
+              },
+              "price": {
+                "amount": 2204,
+                "currency": "USD"
+              },
+              "availability": {
+                "available": true
+              },
+              "options": [
+                {
+                  "name": "Title",
+                  "label": "Default Title"
+                }
+              ],
+              "media": [
+                {
+                  "type": "image",
+                  "url": "https://cdn.shopify.com/s/files/1/0649/4155/5787/files/TBNC_Numbing_Gel.jpg?v=1782788453"
+                }
+              ],
+              "requires": {
+                "shipping": true
+              },
+              "checkout_url": "https://nba0ey-th.myshopify.com/cart/42212221419595:1"
+            }
+          ],
+          "options": [
+            {
+              "name": "Title",
+              "values": [
+                {
+                  "label": "Default Title"
+                }
+              ]
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "url": "https://cdn.shopify.com/s/files/1/0649/4155/5787/files/TBNC_Numbing_Gel.jpg?v=1782788453",
+              "alt_text": "Tattoo Numbing Gel - Mid Session - TaTTTy"
+            }
+          ],
+          "categories": [
+            {
+              "value": "gid://shopify/TaxonomyCategory/hb-1-8",
+              "taxonomy": "shopify"
+            }
+          ],
+          "tags": [
+            "Shopify Collective",
+            "The Best Numbing Cream"
+          ],
+          "gift_card": false,
+          "collections": [
+            {
+              "id": "gid://shopify/Collection/292815372363",
+              "handle": "shop",
+              "title": "Tattoo Numbing Creams",
+              "description": {
+                "html": "Effortless Tattoo Care and Numbing Solutions for Your Artwork Welcome to our curated collection of tattoo care and numbing solutions, designed to enhance your experience from your first ink to its final touch. Our products are here to make the aftercare process seamless, so you can focus on showcasing your beautiful tattoos without any discomfort."
+              }
+            },
+            {
+              "id": "gid://shopify/Collection/296572878923",
+              "handle": "recently-added",
+              "title": "Recently Added",
+              "description": {
+                "html": "Fresh tattoo designs added to the catalog — check back often for new drops."
+              }
+            }
+          ]
+        },
+        {
+          "id": "gid://shopify/Product/7622254198859",
+          "title": "XL Tattoo Numbing Bundle",
+          "description": {
+            "html": "TBNC XL Tattoo Numbing Bundle – Cream XL + Spray + Gel Make long sessions feel short. Our XL Tattoo Numbing Bundle pairs the TBNC Tattoo Numbing Cream XL with our fast-acting Tattoo Numbing Spray and cooling Tattoo Numbing Gel—a complete before, during, and mid-session comfort system designed for bigger pieces and longer sits. What’s Included TBNC Tattoo Numbing Cream XL – Extra-large tube (3x the size of our regular tube) for full prep and large-area coverage. Tattoo Numbing Spray – Quick top-up relief between passes on broken skin. Tattoo Numbing Gel – Numbing glide to help extend comfort mid-session. Why You’ll Love It Full-session system: Prep with cream, maintain with spray, and reinforce with gel. XL capacity: Ample product for sleeves, backs, or multi-hour appointments. Artist-friendly: Non-greasy prep, easy reapplication between passes. Fast acting: Targets sensation quickly when you need it most. How to Use Prep (Cream XL)Clean and dry the area. Apply a generous, even layer of cream 45–60 minutes before your appointment. Cover with plastic film (saran wrap). Remove film and wipe clean just before tattooing. Maintain (Spray)During breaks on broken skin, lightly mist the area and allow 5–10 minutes in saran wrap before resuming. Use as needed between passes. Reinforce (Gel)Apply a thin layer to the tattooed area mid-session to help extend comfort and glide. Patch test 24 hours prior to use. Follow your artist’s guidance. Ideal For Large pieces (sleeves, back/leg work) and longer sessions Clients seeking a complete numbing routine from start to finish Key Details Skin type: For external use only Scent: Clean, light, and studio-friendly. Compatibility: Works with standard stencil products and professional tattoo inks. Ingredients & Safety Formulated with topical anesthetic actives and soothing agents lidocaine. Avoid eyes, mouth, and mucous membranes. Do not use if allergic to any ingredient or if you have specific medical conditions that conflict with topical anesthetics. Discontinue use if irritation occurs and consult a professional. FAQs How long does the effect last?Prep cream typically provides the longest baseline comfort; spray and gel help extend relief mid-session. Results vary by skin, placement, and session length. Can my artist apply it?Many studios allow client prep; always confirm with your artist and follow their protocol. Will it affect the stencil?When used as directed and fully cleaned before tattooing, stencils and inks perform normally. What Artists Say “A reliable prep + maintain combo that keeps clients calmer and sessions smoother.” Bundle Benefits Save vs. buying individually Fewer interruptions thanks to targeted re-ups Confidence for first-timers and marathon sessions alike"
+          },
+          "url": "https://tattty.com/products/xl-tattoo-numbing-bundle",
+          "handle": "xl-tattoo-numbing-bundle",
+          "price_range": {
+            "min": {
+              "amount": 6494,
+              "currency": "USD"
+            },
+            "max": {
+              "amount": 6494,
+              "currency": "USD"
+            }
+          },
+          "list_price_range": {
+            "min": {
+              "amount": 0,
+              "currency": "USD"
+            },
+            "max": {
+              "amount": 0,
+              "currency": "USD"
+            }
+          },
+          "variants": [
+            {
+              "id": "gid://shopify/ProductVariant/42212221517899",
+              "sku": "602581867654",
+              "title": "Default Title",
+              "description": {
+                "html": "TBNC XL Tattoo Numbing Bundle – Cream XL + Spray + Gel Make long sessions feel short. Our XL Tattoo Numbing Bundle pairs the TBNC Tattoo Numbing Cream XL with our fast-acting Tattoo Numbing Spray and cooling Tattoo Numbing Gel—a complete before, during, and mid-session comfort system designed for bigger pieces and longer sits. What’s Included TBNC Tattoo Numbing Cream XL – Extra-large tube (3x the size of our regular tube) for full prep and large-area coverage. Tattoo Numbing Spray – Quick top-up relief between passes on broken skin. Tattoo Numbing Gel – Numbing glide to help extend comfort mid-session. Why You’ll Love It Full-session system: Prep with cream, maintain with spray, and reinforce with gel. XL capacity: Ample product for sleeves, backs, or multi-hour appointments. Artist-friendly: Non-greasy prep, easy reapplication between passes. Fast acting: Targets sensation quickly when you need it most. How to Use Prep (Cream XL)Clean and dry the area. Apply a generous, even layer of cream 45–60 minutes before your appointment. Cover with plastic film (saran wrap). Remove film and wipe clean just before tattooing. Maintain (Spray)During breaks on broken skin, lightly mist the area and allow 5–10 minutes in saran wrap before resuming. Use as needed between passes. Reinforce (Gel)Apply a thin layer to the tattooed area mid-session to help extend comfort and glide. Patch test 24 hours prior to use. Follow your artist’s guidance. Ideal For Large pieces (sleeves, back/leg work) and longer sessions Clients seeking a complete numbing routine from start to finish Key Details Skin type: For external use only Scent: Clean, light, and studio-friendly. Compatibility: Works with standard stencil products and professional tattoo inks. Ingredients & Safety Formulated with topical anesthetic actives and soothing agents lidocaine. Avoid eyes, mouth, and mucous membranes. Do not use if allergic to any ingredient or if you have specific medical conditions that conflict with topical anesthetics. Discontinue use if irritation occurs and consult a professional. FAQs How long does the effect last?Prep cream typically provides the longest baseline comfort; spray and gel help extend relief mid-session. Results vary by skin, placement, and session length. Can my artist apply it?Many studios allow client prep; always confirm with your artist and follow their protocol. Will it affect the stencil?When used as directed and fully cleaned before tattooing, stencils and inks perform normally. What Artists Say “A reliable prep + maintain combo that keeps clients calmer and sessions smoother.” Bundle Benefits Save vs. buying individually Fewer interruptions thanks to targeted re-ups Confidence for first-timers and marathon sessions alike"
+              },
+              "price": {
+                "amount": 6494,
+                "currency": "USD"
+              },
+              "availability": {
+                "available": true
+              },
+              "options": [
+                {
+                  "name": "Title",
+                  "label": "Default Title"
+                }
+              ],
+              "media": [
+                {
+                  "type": "image",
+                  "url": "https://cdn.shopify.com/s/files/1/0649/4155/5787/files/TBNC_Tattoo_Numbing_Cream_XL_Kit_6792d145-c4c6-446f-a1f2-7bf6d4a17933.jpg?v=1782902443"
+                }
+              ],
+              "requires": {
+                "shipping": true
+              },
+              "checkout_url": "https://nba0ey-th.myshopify.com/cart/42212221517899:1"
+            }
+          ],
+          "options": [
+            {
+              "name": "Title",
+              "values": [
+                {
+                  "label": "Default Title"
+                }
+              ]
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "url": "https://cdn.shopify.com/s/files/1/0649/4155/5787/files/TBNC_Tattoo_Numbing_Cream_XL_Kit_6792d145-c4c6-446f-a1f2-7bf6d4a17933.jpg?v=1782902443",
+              "alt_text": "XL Tattoo Numbing Bundle - TaTTTy"
+            }
+          ],
+          "categories": [
+            {
+              "value": "gid://shopify/TaxonomyCategory/hb-1-8",
+              "taxonomy": "shopify"
+            }
+          ],
+          "tags": [
+            "Shopify Collective",
+            "The Best Numbing Cream"
+          ],
+          "gift_card": false,
+          "collections": [
+            {
+              "id": "gid://shopify/Collection/292815372363",
+              "handle": "shop",
+              "title": "Tattoo Numbing Creams",
+              "description": {
+                "html": "Effortless Tattoo Care and Numbing Solutions for Your Artwork Welcome to our curated collection of tattoo care and numbing solutions, designed to enhance your experience from your first ink to its final touch. Our products are here to make the aftercare process seamless, so you can focus on showcasing your beautiful tattoos without any discomfort."
+              }
+            },
+            {
+              "id": "gid://shopify/Collection/296572878923",
+              "handle": "recently-added",
+              "title": "Recently Added",
+              "description": {
+                "html": "Fresh tattoo designs added to the catalog — check back often for new drops."
+              }
+            }
+          ]
+        },
+        {
+          "id": "gid://shopify/Product/7622253936715",
+          "title": "Tattoo Numbing Spray - Mid Session",
+          "description": {
+            "html": "Whether you forgot to use our Numbing Cream or it’s starting to wear off, TBNC Tattoo Numbing Spray is perfect to apply mid-session (even on broken skin). Get a bottle so you don’t tap out mid-tattoo. TBNC Tattoo Numbing Spray – Maximum Strength, Fast-Acting Relief for Painless Ink Sessions Get tattooed with confidence and comfort using TBNC Tattoo Numbing Spray – the ultimate solution for pain-free ink sessions. Designed with high-strength lidocaine, this fast-acting numbing spray delivers deep, long-lasting relief, making it perfect for tattoos, piercings, microblading, and cosmetic procedures. Why Choose TBNC Tattoo Numbing Spray? ✅ Maximum Strength Formula – Infused with powerful lidocaine for intense numbing relief.✅ Fast-Acting & Long-Lasting – Numbs skin in minutes and keeps discomfort at bay for hours.✅ Spray-On Convenience – Easy-to-use, mess-free application for precise pain control.✅ Perfect for All Skin Types – Gentle yet effective, ideal for sensitive areas.✅ Trusted by Professionals – Used by tattoo artists, piercers, and cosmetic experts. *Please note that TBNC Tattoo Numbing Spray is safe for use during procedures AND will only work on OPEN or BROKEN SKIN. Please use our numbing cream to get numb before your tattoo session. Test on skin to make sure there are no allergic reactions before using. How To Use: 1. Spray sparingly (2-4 pumps) on broken skin throughout tattoo session.2. Plastic wrap and allow to absorb for 5-10 minutes. 3. Re-apply as needed"
+          },
+          "url": "https://tattty.com/products/tattoo-numbing-spray-mid-session",
+          "handle": "tattoo-numbing-spray-mid-session",
+          "price_range": {
+            "min": {
+              "amount": 2464,
+              "currency": "USD"
+            },
+            "max": {
+              "amount": 2464,
+              "currency": "USD"
+            }
+          },
+          "list_price_range": {
+            "min": {
+              "amount": 0,
+              "currency": "USD"
+            },
+            "max": {
+              "amount": 0,
+              "currency": "USD"
+            }
+          },
+          "variants": [
+            {
+              "id": "gid://shopify/ProductVariant/42212221354059",
+              "sku": "791126067199",
+              "title": "Default Title",
+              "description": {
+                "html": "Whether you forgot to use our Numbing Cream or it’s starting to wear off, TBNC Tattoo Numbing Spray is perfect to apply mid-session (even on broken skin). Get a bottle so you don’t tap out mid-tattoo. TBNC Tattoo Numbing Spray – Maximum Strength, Fast-Acting Relief for Painless Ink Sessions Get tattooed with confidence and comfort using TBNC Tattoo Numbing Spray – the ultimate solution for pain-free ink sessions. Designed with high-strength lidocaine, this fast-acting numbing spray delivers deep, long-lasting relief, making it perfect for tattoos, piercings, microblading, and cosmetic procedures. Why Choose TBNC Tattoo Numbing Spray? ✅ Maximum Strength Formula – Infused with powerful lidocaine for intense numbing relief.✅ Fast-Acting & Long-Lasting – Numbs skin in minutes and keeps discomfort at bay for hours.✅ Spray-On Convenience – Easy-to-use, mess-free application for precise pain control.✅ Perfect for All Skin Types – Gentle yet effective, ideal for sensitive areas.✅ Trusted by Professionals – Used by tattoo artists, piercers, and cosmetic experts. *Please note that TBNC Tattoo Numbing Spray is safe for use during procedures AND will only work on OPEN or BROKEN SKIN. Please use our numbing cream to get numb before your tattoo session. Test on skin to make sure there are no allergic reactions before using. How To Use: 1. Spray sparingly (2-4 pumps) on broken skin throughout tattoo session.2. Plastic wrap and allow to absorb for 5-10 minutes. 3. Re-apply as needed"
+              },
+              "price": {
+                "amount": 2464,
+                "currency": "USD"
+              },
+              "availability": {
+                "available": true
+              },
+              "options": [
+                {
+                  "name": "Title",
+                  "label": "Default Title"
+                }
+              ],
+              "media": [
+                {
+                  "type": "image",
+                  "url": "https://cdn.shopify.com/s/files/1/0649/4155/5787/files/TBNC_Tattoo_Numbing_Spray_1.jpg?v=1783999469"
+                }
+              ],
+              "requires": {
+                "shipping": true
+              },
+              "checkout_url": "https://nba0ey-th.myshopify.com/cart/42212221354059:1"
+            }
+          ],
+          "options": [
+            {
+              "name": "Title",
+              "values": [
+                {
+                  "label": "Default Title"
+                }
+              ]
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "url": "https://cdn.shopify.com/s/files/1/0649/4155/5787/files/TBNC_Tattoo_Numbing_Spray_1.jpg?v=1783999469",
+              "alt_text": "Tattoo Numbing Spray - Mid Session"
+            }
+          ],
+          "categories": [
+            {
+              "value": "gid://shopify/TaxonomyCategory/hb-1-8",
+              "taxonomy": "shopify"
+            }
+          ],
+          "tags": [
+            "Shopify Collective",
+            "The Best Numbing Cream"
+          ],
+          "gift_card": false,
+          "collections": [
+            {
+              "id": "gid://shopify/Collection/292815372363",
+              "handle": "shop",
+              "title": "Tattoo Numbing Creams",
+              "description": {
+                "html": "Effortless Tattoo Care and Numbing Solutions for Your Artwork Welcome to our curated collection of tattoo care and numbing solutions, designed to enhance your experience from your first ink to its final touch. Our products are here to make the aftercare process seamless, so you can focus on showcasing your beautiful tattoos without any discomfort."
+              }
+            },
+            {
+              "id": "gid://shopify/Collection/296572878923",
+              "handle": "recently-added",
+              "title": "Recently Added",
+              "description": {
+                "html": "Fresh tattoo designs added to the catalog — check back often for new drops."
+              }
+            }
+          ]
+        },
+        {
+          "id": "gid://shopify/Product/8099939876939",
+          "title": "Kamikaze Tattoo Numbing Glide",
+          "description": {
+            "html": "Kamikaze Tattoo Artist Glide, the premiere tattoo glide amongst tattoo professionals! Crafted with care in the USA, our 8 oz. jar packs a powerful punch with 380mg of hemp tattoo cream, boasting a maximum 5% lidocaine content to elevate your artistry to new heights. Scented delicately, from unscented to a subtle citrus note, our natural and organic formula blends the soothing properties of hemp, premium hydrating oils, nourishing butters, and lidocaine for a fast-acting, lightweight, and non-greasy solution. Bid farewell to globs of glide on your tray – our super-concentrated formula ensures a little goes a long way, delivering a therapeutic tattoo experience every time. Kamikaze Tattoo Artist Glide is the ultimate solution for tattoo artists seeking unparalleled performance and versatility. Engineered to meet the highest standards of tattooing, it encompasses all the essential features artists look for in a tattoo glide and goes above and beyond. With its smooth lubrication, long-lasting formula, and non-sticky consistency, Kamikaze ensures seamless tattooing sessions without interruption. But that's just the beginning – Kamikaze Tattoo Glide offers a plethora of additional benefits, including enhanced moisturization for vibrant tattoos, effortless cleanup, and compatibility with all skin types, even the most sensitive. With Kamikaze Tattoo Glide, artists can elevate their craft to new heights, delivering exceptional results and unparalleled client satisfaction. Smooth Gliding Hemp: Allow our non-greasy, all-natural hemp extract and therapeutic hydrating oils to soothe pains and ease your client's discomfort, enabling longer sessions without compromising on glide or clarity. Silence the Screams: Strike the perfect balance with our glide's consistency – thick enough for superior glide, yet thin enough for your client to feel the needle's vibration. Calm and numb skin irritation to extend session durations effortlessly. Hemp, Lidocaine, Jojoba Butter, Argan Oil, are just a few powerful ingredients that work in harmony to ease, soothe, moisturize ensuring a comfortable and hygienic tattooing experience. Perfect for Stencil Longevity Kamikaze ensures your stencil stays intact until the final stroke, ensuring seamless completion of your artistry. For Tattoo Professionals Endorsed by tattooers, for tattooers. Our thoughtfully curated blend minimizes pooling, client discomfort, and clogged needles, allowing you to unleash your creativity effortlessly. Capture Amazing Photos Say goodbye to swelling and redness post-session, capturing your art in its full glory. Client Comfort Use as your tattoo glide throughout the entire session for maximum client relief. Please note, this product does not provide numbing prior to linework and should not be used as such. Consult a medical professional before using products containing lidocaine. Elevate your tattooing game with Kamikaze Tattoo Artist Glide – where comfort meets creativity, every time. Disclaimer: Green soap and witch hazel both contain alcohol, which can impact the efficiency of our products when used on the same tattoo. Alcohol can interfere with the effectiveness of lidocaine, potentially reducing its full numbing power when combined with green soap or witch hazel. To ensure optimal results for both the artist and client, our products are specifically designed to work in tandem. Therefore, we recommend using Samurai Foaming Soap or distilled water instead of green soap or witch hazel, to achieve the best possible outcome. Disclaimer:This product contains both Lidocaine and CBD. While these ingredients are used topically and are not intended to produce psychoactive effects, individuals in recovery from substance use disorders should exercise caution. Lidocaine and/or CBD may potentially trigger psychological associations or cravings in some individuals. If you are in recovery, please consult with your healthcare provider before using this product. Urban’s Edge does not recommend this product for those with a history of substance dependency without medical clearance. Preserving Lidocaine’s Effectiveness During Tattooing Lidocaine is a valuable tool for keeping clients comfortable, but its numbing power can be dramatically reduced depending on what is used on the skin during the tattoo process. Green Soap – Can reduce lidocaine’s effectiveness by up to 50%. The surfactants in green soap strip the lidocaine from the skin’s surface and disrupt absorption. Witch Hazel – May cut numbing power by 30–40%. Its astringent properties constrict pores and blood vessels, reducing lidocaine penetration. Alcohol – Can decrease effectiveness by 40–60%. Alcohol quickly dissolves lidocaine molecules and evaporates them off the skin. Once these products are introduced, the numbing effect drops quickly, shortening comfort time for your client. ✅ Best Practice for Maximum Effectiveness: Use distilled water or Samurai Vegan Soap for wiping and cleaning during the tattoo process. These will not break down lidocaine and allow the numbing agent to remain active longer. ❌ Avoid using green soap, witch hazel, or alcohol once lidocaine has been applied. Keeping the right environment on the skin ensures your client experiences the full benefits of lidocaine, improving both comfort and session quality."
+          },
+          "url": "https://tattty.com/products/kamikaze-tattoo-numbing-glide",
+          "handle": "kamikaze-tattoo-numbing-glide",
+          "price_range": {
+            "min": {
+              "amount": 7800,
+              "currency": "USD"
+            },
+            "max": {
+              "amount": 7800,
+              "currency": "USD"
+            }
+          },
+          "list_price_range": {
+            "min": {
+              "amount": 0,
+              "currency": "USD"
+            },
+            "max": {
+              "amount": 0,
+              "currency": "USD"
+            }
+          },
+          "variants": [
+            {
+              "id": "gid://shopify/ProductVariant/43166148395083",
+              "sku": "857927008691",
+              "title": "Default Title",
+              "description": {
+                "html": "Kamikaze Tattoo Artist Glide, the premiere tattoo glide amongst tattoo professionals! Crafted with care in the USA, our 8 oz. jar packs a powerful punch with 380mg of hemp tattoo cream, boasting a maximum 5% lidocaine content to elevate your artistry to new heights. Scented delicately, from unscented to a subtle citrus note, our natural and organic formula blends the soothing properties of hemp, premium hydrating oils, nourishing butters, and lidocaine for a fast-acting, lightweight, and non-greasy solution. Bid farewell to globs of glide on your tray – our super-concentrated formula ensures a little goes a long way, delivering a therapeutic tattoo experience every time. Kamikaze Tattoo Artist Glide is the ultimate solution for tattoo artists seeking unparalleled performance and versatility. Engineered to meet the highest standards of tattooing, it encompasses all the essential features artists look for in a tattoo glide and goes above and beyond. With its smooth lubrication, long-lasting formula, and non-sticky consistency, Kamikaze ensures seamless tattooing sessions without interruption. But that's just the beginning – Kamikaze Tattoo Glide offers a plethora of additional benefits, including enhanced moisturization for vibrant tattoos, effortless cleanup, and compatibility with all skin types, even the most sensitive. With Kamikaze Tattoo Glide, artists can elevate their craft to new heights, delivering exceptional results and unparalleled client satisfaction. Smooth Gliding Hemp: Allow our non-greasy, all-natural hemp extract and therapeutic hydrating oils to soothe pains and ease your client's discomfort, enabling longer sessions without compromising on glide or clarity. Silence the Screams: Strike the perfect balance with our glide's consistency – thick enough for superior glide, yet thin enough for your client to feel the needle's vibration. Calm and numb skin irritation to extend session durations effortlessly. Hemp, Lidocaine, Jojoba Butter, Argan Oil, are just a few powerful ingredients that work in harmony to ease, soothe, moisturize ensuring a comfortable and hygienic tattooing experience. Perfect for Stencil Longevity Kamikaze ensures your stencil stays intact until the final stroke, ensuring seamless completion of your artistry. For Tattoo Professionals Endorsed by tattooers, for tattooers. Our thoughtfully curated blend minimizes pooling, client discomfort, and clogged needles, allowing you to unleash your creativity effortlessly. Capture Amazing Photos Say goodbye to swelling and redness post-session, capturing your art in its full glory. Client Comfort Use as your tattoo glide throughout the entire session for maximum client relief. Please note, this product does not provide numbing prior to linework and should not be used as such. Consult a medical professional before using products containing lidocaine. Elevate your tattooing game with Kamikaze Tattoo Artist Glide – where comfort meets creativity, every time. Disclaimer: Green soap and witch hazel both contain alcohol, which can impact the efficiency of our products when used on the same tattoo. Alcohol can interfere with the effectiveness of lidocaine, potentially reducing its full numbing power when combined with green soap or witch hazel. To ensure optimal results for both the artist and client, our products are specifically designed to work in tandem. Therefore, we recommend using Samurai Foaming Soap or distilled water instead of green soap or witch hazel, to achieve the best possible outcome. Disclaimer:This product contains both Lidocaine and CBD. While these ingredients are used topically and are not intended to produce psychoactive effects, individuals in recovery from substance use disorders should exercise caution. Lidocaine and/or CBD may potentially trigger psychological associations or cravings in some individuals. If you are in recovery, please consult with your healthcare provider before using this product. Urban’s Edge does not recommend this product for those with a history of substance dependency without medical clearance. Preserving Lidocaine’s Effectiveness During Tattooing Lidocaine is a valuable tool for keeping clients comfortable, but its numbing power can be dramatically reduced depending on what is used on the skin during the tattoo process. Green Soap – Can reduce lidocaine’s effectiveness by up to 50%. The surfactants in green soap strip the lidocaine from the skin’s surface and disrupt absorption. Witch Hazel – May cut numbing power by 30–40%. Its astringent properties constrict pores and blood vessels, reducing lidocaine penetration. Alcohol – Can decrease effectiveness by 40–60%. Alcohol quickly dissolves lidocaine molecules and evaporates them off the skin. Once these products are introduced, the numbing effect drops quickly, shortening comfort time for your client. ✅ Best Practice for Maximum Effectiveness: Use distilled water or Samurai Vegan Soap for wiping and cleaning during the tattoo process. These will not break down lidocaine and allow the numbing agent to remain active longer. ❌ Avoid using green soap, witch hazel, or alcohol once lidocaine has been applied. Keeping the right environment on the skin ensures your client experiences the full benefits of lidocaine, improving both comfort and session quality."
+              },
+              "price": {
+                "amount": 7800,
+                "currency": "USD"
+              },
+              "availability": {
+                "available": true
+              },
+              "options": [
+                {
+                  "name": "Title",
+                  "label": "Default Title"
+                }
+              ],
+              "media": [
+                {
+                  "type": "image",
+                  "url": "https://cdn.shopify.com/s/files/1/0649/4155/5787/files/Kamikaze-Mock_up-7.png?v=1788885967"
+                }
+              ],
+              "requires": {
+                "shipping": true
+              },
+              "checkout_url": "https://nba0ey-th.myshopify.com/cart/43166148395083:1"
+            }
+          ],
+          "options": [
+            {
+              "name": "Title",
+              "values": [
+                {
+                  "label": "Default Title"
+                }
+              ]
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "url": "https://cdn.shopify.com/s/files/1/0649/4155/5787/files/Kamikaze-Mock_up-7.png?v=1788885967"
+            }
+          ],
+          "categories": [
+            {
+              "value": "gid://shopify/TaxonomyCategory/bi-21-2",
+              "taxonomy": "shopify"
+            }
+          ],
+          "tags": [
+            "Shopify Collective",
+            "UrbansEdgeTattoo"
+          ],
+          "gift_card": false,
+          "collections": [
+            {
+              "id": "gid://shopify/Collection/296572878923",
+              "handle": "recently-added",
+              "title": "Recently Added",
+              "description": {
+                "html": "Fresh tattoo designs added to the catalog — check back often for new drops."
+              }
+            },
+            {
+              "id": "gid://shopify/Collection/299755241547",
+              "handle": "urban-connection",
+              "title": "Urban Connection",
+              "description": {
+                "html": ""
+              }
+            }
+          ]
+        },
+        {
+          "id": "gid://shopify/Product/8099939811403",
+          "title": "RONIN SOOTHING NUMBING GEL",
+          "description": {
+            "html": "Ronin Tattoo Numbing Gel – Your go-to mid-session numbing solution for a smoother tattooing experience. Formulated with 5% lidocaine and 500 mg CBD, Ronin provides fast-acting relief by reducing pain, swelling, and irritation without altering skin texture. Apply directly to freshly tattooed skin, cover with saran wrap for 15 minutes, and keep your client comfortable while you work. Elevate your sessions with Ronin—because a better experience means better results. Upholding the exceptional standards you expect from Urban's Edge. Crafted with vegan, natural, and the highest quality ingredients. Pure, powerful and designed for artists who demand the best- Ronin delivers! NOTE: This is not a pre-numb. Fast-Acting Relief – Formulated with 5% lidocaine and CBD to quickly reduce pain, swelling, and irritation during tattoo sessions. Mid-Session Application – Designed specifically to be applied mid-tattoo on broken skin for immediate comfort without disrupting your workflow. Skin-Friendly Formula – Won’t alter skin texture, ensuring smooth application and clean lines throughout the session. Simple Use – Apply directly to freshly tattooed skin, cover with saran wrap for 15 minutes, and continue tattooing with ease. Premium Quality – Crafted with vegan, natural, and high-grade ingredients that align with the elite standards of Urban’s Edge. Artist-Focused Performance – Built for professionals who demand precision and performance—because a more comfortable client means a better outcome. Disclaimer:This product contains both Lidocaine and CBD. While these ingredients are used topically and are not intended to produce psychoactive effects, individuals in recovery from substance use disorders should exercise caution. Lidocaine and/or CBD may potentially trigger psychological associations or cravings in some individuals. If you are in recovery, please consult with your healthcare provider before using this product. Urban’s Edge does not recommend this product for those with a history of substance dependency without medical clearance. Preserving Lidocaine’s Effectiveness During Tattooing Lidocaine is a valuable tool for keeping clients comfortable, but its numbing power can be dramatically reduced depending on what is used on the skin during the tattoo process. Green Soap – Can reduce lidocaine’s effectiveness by up to 50%. The surfactants in green soap strip the lidocaine from the skin’s surface and disrupt absorption. Witch Hazel – May cut numbing power by 30–40%. Its astringent properties constrict pores and blood vessels, reducing lidocaine penetration. Alcohol – Can decrease effectiveness by 40–60%. Alcohol quickly dissolves lidocaine molecules and evaporates them off the skin. Once these products are introduced, the numbing effect drops quickly, shortening comfort time for your client. ✅ Best Practice for Maximum Effectiveness: Use distilled water or Samurai Vegan Soap for wiping and cleaning during the tattoo process. These will not break down lidocaine and allow the numbing agent to remain active longer. ❌ Avoid using green soap, witch hazel, or alcohol once lidocaine has been applied. Keeping the right environment on the skin ensures your client experiences the full benefits of lidocaine, improving both comfort and session quality."
+          },
+          "url": "https://tattty.com/products/ronin-soothing-numbing-gel",
+          "handle": "ronin-soothing-numbing-gel",
+          "price_range": {
+            "min": {
+              "amount": 9100,
+              "currency": "USD"
+            },
+            "max": {
+              "amount": 9100,
+              "currency": "USD"
+            }
+          },
+          "list_price_range": {
+            "min": {
+              "amount": 0,
+              "currency": "USD"
+            },
+            "max": {
+              "amount": 0,
+              "currency": "USD"
+            }
+          },
+          "variants": [
+            {
+              "id": "gid://shopify/ProductVariant/43166148296779",
+              "sku": "857927008752",
+              "title": "Plastic container",
+              "description": {
+                "html": "Ronin Tattoo Numbing Gel – Your go-to mid-session numbing solution for a smoother tattooing experience. Formulated with 5% lidocaine and 500 mg CBD, Ronin provides fast-acting relief by reducing pain, swelling, and irritation without altering skin texture. Apply directly to freshly tattooed skin, cover with saran wrap for 15 minutes, and keep your client comfortable while you work. Elevate your sessions with Ronin—because a better experience means better results. Upholding the exceptional standards you expect from Urban's Edge. Crafted with vegan, natural, and the highest quality ingredients. Pure, powerful and designed for artists who demand the best- Ronin delivers! NOTE: This is not a pre-numb. Fast-Acting Relief – Formulated with 5% lidocaine and CBD to quickly reduce pain, swelling, and irritation during tattoo sessions. Mid-Session Application – Designed specifically to be applied mid-tattoo on broken skin for immediate comfort without disrupting your workflow. Skin-Friendly Formula – Won’t alter skin texture, ensuring smooth application and clean lines throughout the session. Simple Use – Apply directly to freshly tattooed skin, cover with saran wrap for 15 minutes, and continue tattooing with ease. Premium Quality – Crafted with vegan, natural, and high-grade ingredients that align with the elite standards of Urban’s Edge. Artist-Focused Performance – Built for professionals who demand precision and performance—because a more comfortable client means a better outcome. Disclaimer:This product contains both Lidocaine and CBD. While these ingredients are used topically and are not intended to produce psychoactive effects, individuals in recovery from substance use disorders should exercise caution. Lidocaine and/or CBD may potentially trigger psychological associations or cravings in some individuals. If you are in recovery, please consult with your healthcare provider before using this product. Urban’s Edge does not recommend this product for those with a history of substance dependency without medical clearance. Preserving Lidocaine’s Effectiveness During Tattooing Lidocaine is a valuable tool for keeping clients comfortable, but its numbing power can be dramatically reduced depending on what is used on the skin during the tattoo process. Green Soap – Can reduce lidocaine’s effectiveness by up to 50%. The surfactants in green soap strip the lidocaine from the skin’s surface and disrupt absorption. Witch Hazel – May cut numbing power by 30–40%. Its astringent properties constrict pores and blood vessels, reducing lidocaine penetration. Alcohol – Can decrease effectiveness by 40–60%. Alcohol quickly dissolves lidocaine molecules and evaporates them off the skin. Once these products are introduced, the numbing effect drops quickly, shortening comfort time for your client. ✅ Best Practice for Maximum Effectiveness: Use distilled water or Samurai Vegan Soap for wiping and cleaning during the tattoo process. These will not break down lidocaine and allow the numbing agent to remain active longer. ❌ Avoid using green soap, witch hazel, or alcohol once lidocaine has been applied. Keeping the right environment on the skin ensures your client experiences the full benefits of lidocaine, improving both comfort and session quality."
+              },
+              "price": {
+                "amount": 9100,
+                "currency": "USD"
+              },
+              "availability": {
+                "available": true
+              },
+              "options": [
+                {
+                  "name": "8 oz jar",
+                  "label": "Plastic container"
+                }
+              ],
+              "media": [
+                {
+                  "type": "image",
+                  "url": "https://cdn.shopify.com/s/files/1/0649/4155/5787/files/Ronin-Mock_Up-1.png?v=1788885963"
+                }
+              ],
+              "requires": {
+                "shipping": true
+              },
+              "checkout_url": "https://nba0ey-th.myshopify.com/cart/43166148296779:1"
+            }
+          ],
+          "options": [
+            {
+              "name": "8 oz jar",
+              "values": [
+                {
+                  "label": "Plastic container"
+                }
+              ]
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "url": "https://cdn.shopify.com/s/files/1/0649/4155/5787/files/Ronin-Mock_Up-1.png?v=1788885963"
+            }
+          ],
+          "categories": [
+            {
+              "value": "gid://shopify/TaxonomyCategory/bi-21-2",
+              "taxonomy": "shopify"
+            }
+          ],
+          "tags": [
+            "Shopify Collective",
+            "UrbansEdgeTattoo"
+          ],
+          "gift_card": false,
+          "collections": [
+            {
+              "id": "gid://shopify/Collection/296572878923",
+              "handle": "recently-added",
+              "title": "Recently Added",
+              "description": {
+                "html": "Fresh tattoo designs added to the catalog — check back often for new drops."
+              }
+            },
+            {
+              "id": "gid://shopify/Collection/299755241547",
+              "handle": "urban-connection",
+              "title": "Urban Connection",
+              "description": {
+                "html": ""
+              }
+            }
+          ]
+        },
+        {
+          "id": "gid://shopify/Product/7622254166091",
+          "title": "Tattoo Soothing Gel",
+          "description": {
+            "html": "Soothe and protect your fresh tattoo with TBNC Tattoo Soothing Gel, a lightweight, fast-absorbing formula designed to relieve discomfort, reduce redness, and accelerate healing. Infused with powerful natural ingredients, this gel creates a protective barrier over your tattoo while deeply hydrating and nourishing the skin. Key Benefits: ✅Instant Cooling Relief – Aloe vera and chamomile extract calm irritation and soothe itching.✅Faster Healing – Enriched with vitamins and antioxidants to promote skin regeneration.✅Non-Greasy, Lightweight Formula – Absorbs quickly, leaving no sticky residue.✅Prevents Scabbing & Cracking – Keeps skin hydrated to reduce peeling and dryness.✅Enhances Tattoo Vibrancy – Helps preserve ink clarity and color intensity.✅Fragrance-Free & Hypoallergenic – Safe for all skin types, including sensitive skin. How to Use: Clean your tattoo with TBNC Foaming Soap and pat dry. Apply a thin layer of TBNC Tattoo Soothing Gel over the area. Let it absorb naturally—no need to rub in excessively. Use 2-3 times daily or as needed to keep your tattoo moisturized and protected. Why Choose TBNC Tattoo Soothing Gel? Unlike regular lotions, our gel is formulated specifically for tattoo aftercare. The cooling sensation provides immediate relief from itching and irritation, while its hydrating properties prevent excessive dryness and peeling. With no harsh chemicals or artificial fragrances, it’s a must-have for anyone looking to heal their tattoo quickly and comfortably. Keep your ink looking bold and your skin feeling great with TBNC Tattoo Soothing Gel – because your art deserves the best care!"
+          },
+          "url": "https://tattty.com/products/tattoo-soothing-gel",
+          "handle": "tattoo-soothing-gel",
+          "price_range": {
+            "min": {
+              "amount": 1944,
+              "currency": "USD"
+            },
+            "max": {
+              "amount": 1944,
+              "currency": "USD"
+            }
+          },
+          "list_price_range": {
+            "min": {
+              "amount": 0,
+              "currency": "USD"
+            },
+            "max": {
+              "amount": 0,
+              "currency": "USD"
+            }
+          },
+          "variants": [
+            {
+              "id": "gid://shopify/ProductVariant/42212221616203",
+              "sku": "791126067182",
+              "title": "Default Title",
+              "description": {
+                "html": "Soothe and protect your fresh tattoo with TBNC Tattoo Soothing Gel, a lightweight, fast-absorbing formula designed to relieve discomfort, reduce redness, and accelerate healing. Infused with powerful natural ingredients, this gel creates a protective barrier over your tattoo while deeply hydrating and nourishing the skin. Key Benefits: ✅Instant Cooling Relief – Aloe vera and chamomile extract calm irritation and soothe itching.✅Faster Healing – Enriched with vitamins and antioxidants to promote skin regeneration.✅Non-Greasy, Lightweight Formula – Absorbs quickly, leaving no sticky residue.✅Prevents Scabbing & Cracking – Keeps skin hydrated to reduce peeling and dryness.✅Enhances Tattoo Vibrancy – Helps preserve ink clarity and color intensity.✅Fragrance-Free & Hypoallergenic – Safe for all skin types, including sensitive skin. How to Use: Clean your tattoo with TBNC Foaming Soap and pat dry. Apply a thin layer of TBNC Tattoo Soothing Gel over the area. Let it absorb naturally—no need to rub in excessively. Use 2-3 times daily or as needed to keep your tattoo moisturized and protected. Why Choose TBNC Tattoo Soothing Gel? Unlike regular lotions, our gel is formulated specifically for tattoo aftercare. The cooling sensation provides immediate relief from itching and irritation, while its hydrating properties prevent excessive dryness and peeling. With no harsh chemicals or artificial fragrances, it’s a must-have for anyone looking to heal their tattoo quickly and comfortably. Keep your ink looking bold and your skin feeling great with TBNC Tattoo Soothing Gel – because your art deserves the best care!"
+              },
+              "price": {
+                "amount": 1944,
+                "currency": "USD"
+              },
+              "availability": {
+                "available": true
+              },
+              "options": [
+                {
+                  "name": "Title",
+                  "label": "Default Title"
+                }
+              ],
+              "media": [
+                {
+                  "type": "image",
+                  "url": "https://cdn.shopify.com/s/files/1/0649/4155/5787/files/TBNC_Tattoo_Soothing_Gel_Aftercare_fd3c4af6-e330-4399-9f5c-4e575dc4670f.jpg?v=1790857493"
+                }
+              ],
+              "requires": {
+                "shipping": true
+              },
+              "checkout_url": "https://nba0ey-th.myshopify.com/cart/42212221616203:1"
+            }
+          ],
+          "options": [
+            {
+              "name": "Title",
+              "values": [
+                {
+                  "label": "Default Title"
+                }
+              ]
+            }
+          ],
+          "media": [
+            {
+              "type": "image",
+              "url": "https://cdn.shopify.com/s/files/1/0649/4155/5787/files/TBNC_Tattoo_Soothing_Gel_Aftercare_fd3c4af6-e330-4399-9f5c-4e575dc4670f.jpg?v=1790857493"
+            }
+          ],
+          "categories": [
+            {
+              "value": "gid://shopify/TaxonomyCategory/hb-3-2-9-10",
+              "taxonomy": "shopify"
+            }
+          ],
+          "tags": [
+            "Shopify Collective",
+            "The Best Numbing Cream"
+          ],
+          "gift_card": false,
+          "collections": [
+            {
+              "id": "gid://shopify/Collection/292815372363",
+              "handle": "shop",
+              "title": "Tattoo Numbing Creams",
+              "description": {
+                "html": "Effortless Tattoo Care and Numbing Solutions for Your Artwork Welcome to our curated collection of tattoo care and numbing solutions, designed to enhance your experience from your first ink to its final touch. Our products are here to make the aftercare process seamless, so you can focus on showcasing your beautiful tattoos without any discomfort."
+              }
+            },
+            {
+              "id": "gid://shopify/Collection/296572878923",
+              "handle": "recently-added",
+              "title": "Recently Added",
+              "description": {
+                "html": "Fresh tattoo designs added to the catalog — check back often for new drops."
+              }
+            }
+          ]
+        }
+      ],
+      "pagination": {
+        "has_next_page": true,
+        "cursor": "eyJncmFwaHFsX2N1cnNvciI6ImV5SndZV2RsSWpveUxDSnNZWE4wWDJsa0lqbzNOakl5TWpVME1UWTJNRGt4TENKeVpYWmxjbk5sSWpwMGNuVmxMQ0p2Wm1aelpYUWlPamw5IiwicGFnZSI6Mn0="
+      },
+      "messages": []
+    }
+  }
+}
+00:28
+User
+Sure
+
+38.0kt
+00:30
+Assistant
+Nice, there are a few solid numbing cream options. The standard cream is about twenty dollars and seventy four cents. The XL one ounce is about twenty nine dollars and eighty four cents, and the MAX two ounce is about thirty eight dollars and ninety four cents. Want a quick recommendation based on your session size, small, large, or marathon?
+
+617t

@@ -1,0 +1,10 @@
+{
+  "description": "Enables e-commerce merchants to add a voice-only AI sales agent widget that offers real-time product assistance and seamless customer interaction.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
